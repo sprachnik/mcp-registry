@@ -6,22 +6,10 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-# Cache JSON files for 1 hour
-[[headers]]
-  for = "/data/*.json"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# Cache JavaScript and CSS for 1 day
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
+# Cache headers live in the _headers file (Netlify reads both, but _headers
+# is the authoritative source here so we don't accidentally diverge).
+# Keeping a single representative rule here so future contributors know to
+# check _headers.
 
 [build]
   publish = "."

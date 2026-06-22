@@ -16,19 +16,23 @@
   Access-Control-Allow-Methods: GET, OPTIONS
   Access-Control-Allow-Headers: Content-Type
 
-# JSON data - longer cache
+# JSON data - longer cache; safe to stale because the daily workflow
+# regenerates this anyway.
 /data/*.json
   Cache-Control: public, max-age=7200, stale-while-revalidate=3600
   Content-Type: application/json; charset=utf-8
 
-# Static assets
+# JS / CSS / HTML are NOT fingerprinted (filenames don't change between
+# deploys), so we use max-age=0 + must-revalidate. The browser issues a
+# cheap conditional GET each pageview and Netlify returns 304 Not Modified
+# whenever the file is unchanged. This makes redeploys take effect on the
+# next page load instead of being shadowed by a stale immutable cache.
 /*.js
-  Cache-Control: public, max-age=86400, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.css
-  Cache-Control: public, max-age=86400, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
-# HTML
 /*.html
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
   Content-Type: text/html; charset=utf-8
