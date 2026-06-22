@@ -197,7 +197,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 4rem 0 3rem;
+      padding: 3rem 0 1.25rem;
       background:
         radial-gradient(1200px 400px at 12% -10%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 60%),
         radial-gradient(900px 380px at 92% 0%, color-mix(in srgb, var(--accent-purple) 20%, transparent), transparent 55%);
@@ -281,7 +281,7 @@
     .search-clear:hover { color: var(--text); }
 
     /* ---------- Controls ---------- */
-    main { padding-block: 2.5rem 4rem; }
+    main { padding-block: 1.25rem 4rem; }
 
     .controls {
       display: flex;
@@ -685,8 +685,55 @@
       width: 1px; height: 1px; overflow: hidden;
     }
 
+    /* ---------- Coffee modal ---------- */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: color-mix(in srgb, #050038 55%, transparent);
+      backdrop-filter: blur(2px);
+      display: none;
+      align-items: center; justify-content: center;
+      padding: 1rem;
+      z-index: 100;
+      animation: fadeIn .2s ease both;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 2rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn .25s ease both;
+    }
+    .modal h2 { margin: 0 0 0.5rem; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.01em; }
+    .modal p { margin: 0 0 1.25rem; color: var(--muted); font-size: 0.95rem; }
+    .modal-actions { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary, .btn-ghost {
+      font: inherit; font-weight: 600; font-size: 0.9rem;
+      padding: 0.65rem 1.1rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      transition: transform .15s, background .15s, border-color .15s;
+    }
+    .btn-primary {
+      background: var(--primary); color: var(--on-primary);
+      border: 1px solid var(--primary);
+    }
+    .btn-primary:hover { background: var(--primary-strong); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--line);
+    }
+    .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+
     @media (max-width: 640px) {
-      .hero { padding: 2.5rem 0 2rem; }
+      .hero { padding: 2rem 0 1rem; }
       .results-grid { grid-template-columns: 1fr; }
       .search-kbd { display: none; }
       .container { padding-inline: 1rem; }
@@ -713,6 +760,12 @@
         <a class="icon-btn" href="https://github.com/sprachnik/mcp-registry" target="_blank" rel="noopener" aria-label="View source on GitHub" title="View on GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
         </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/jamesmoores/" target="_blank" rel="noopener" aria-label="James Stalley-Moores on LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm-1.78 13.02h3.56V9H3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.99 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.22 0z"/></svg>
+        </a>
+        <button class="icon-btn" id="coffeeOpen" aria-label="Support — buy me a coffee" title="Buy me a coffee" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><path d="M6 2v3M10 2v3M14 2v3"/></svg>
+        </button>
         <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme" type="button">
           <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -790,6 +843,18 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
   </button>
 
+  <!-- Buy me a coffee modal -->
+  <div class="modal-backdrop" id="coffeeModal" role="dialog" aria-modal="true" aria-labelledby="coffeeTitle" hidden>
+    <div class="modal">
+      <h2 id="coffeeTitle">Enjoying this?</h2>
+      <p>This is a personal side project — free to use, no ads, no tracking. If it's saved you time, you can buy me a coffee. Either way, thanks for visiting.</p>
+      <div class="modal-actions">
+        <a class="btn-primary" href="https://buymeacoffee.com/jamesstalleymoores" target="_blank" rel="noopener">Buy me a coffee</a>
+        <button class="btn-ghost" id="coffeeClose" type="button">No thanks</button>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div class="container">
       <p>
@@ -811,6 +876,22 @@
         var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', theme);
       } catch (e) {}
+    })();
+  </script>
+
+  <!-- Buy me a coffee modal wiring -->
+  <script>
+    (function () {
+      var modal = document.getElementById('coffeeModal');
+      var open  = document.getElementById('coffeeOpen');
+      var close = document.getElementById('coffeeClose');
+      if (!modal || !open) return;
+      function show() { modal.hidden = false; modal.classList.add('open'); }
+      function hide() { modal.classList.remove('open'); modal.hidden = true; }
+      open.addEventListener('click', show);
+      close && close.addEventListener('click', hide);
+      modal.addEventListener('click', function (e) { if (e.target === modal) hide(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) hide(); });
     })();
   </script>
 
