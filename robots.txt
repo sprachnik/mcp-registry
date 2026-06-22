@@ -1,0 +1,28 @@
+# Allow all search engines and crawlers
+User-agent: *
+Allow: /
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://mcp-registry.netlify.app/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 1

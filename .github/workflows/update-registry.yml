@@ -1,0 +1,128 @@
+name: Update MCP Registry
+
+on:
+  # Run on every push to main
+  push:
+    branches:
+      - main
+
+  # Run daily at 2 AM UTC
+  schedule:
+    - cron: '0 2 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  # Run tests first
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Run tests
+        run: npm test
+
+  # Then update registry (only if tests pass)
+  update-registry:
+    runs-on: ubuntu-latest
+    needs: test  # Wait for tests to pass
+    # Only run on main branch, even if manually triggered from elsewhere
+    if: github.ref == 'refs/heads/main'
+
+    permissions:
+      contents: write  # Need write permission to commit
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for proper commits
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Run registry scraper
+        env:
+          SCRAPER_BATCH_SIZE: 50       # Fetch 50 servers per request (reduced to prevent OOM)
+          SCRAPER_DELAY_MS: 20         # Fast: 20ms delay between requests
+          # Cron job: unlimited, Manual push: 100k limit
+          SCRAPER_MAX_SERVERS: ${{ github.event_name == 'schedule' && '0' || '100000' }}
+        run: |
+          echo "🚀 Starting MCP registry scraper..."
+          echo "📅 Trigger: ${{ github.event_name }}"
+          echo "⚙️  Max servers: ${{ github.event_name == 'schedule' && 'unlimited' || '100,000' }}"
+          chmod +x scripts/scrape-registry.js
+          node scripts/scrape-registry.js
+
+      - name: Validate server data
+        run: |
+          echo "✅ Validating server data..."
+          node scripts/validate-servers.js
+
+      - name: Inject build ID
+        run: |
+          echo "🔨 Injecting build ID..."
+          chmod +x scripts/inject-build-id.js
+          node scripts/inject-build-id.js
+
+      - name: Update sitemap
+        run: |
+          echo "🗺️  Updating sitemap.xml..."
+          chmod +x scripts/update-sitemap.js
+          node scripts/update-sitemap.js
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code data/all-servers.json index.html sitemap.xml || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Get server count from all-servers.json
+          TOTAL_SERVERS=$(node -e "console.log(require('./data/all-servers.json').count)")
+
+          git add data/all-servers.json index.html sitemap.xml
+
+          # Create commit message
+          cat > commit_message.txt << EOF
+          🤖 Auto-update MCP registry
+
+          - Total servers: ${TOTAL_SERVERS}
+
+          Scraped from registry.modelcontextprotocol.io
+          Generated at: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          EOF
+
+          git commit -F commit_message.txt
+          git push
+
+          echo "✅ Changes committed and pushed"
+
+      - name: No changes detected
+        if: steps.git-check.outputs.changes != 'true'
+        run: |
+          echo "ℹ️  No changes detected - registry is up to date"
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "📊 Registry Update Summary"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          TOTAL_SERVERS=$(node -e "console.log(require('./data/all-servers.json').count)" 2>/dev/null || echo "0")
+          echo "Total servers: $TOTAL_SERVERS"
+          echo "Workflow trigger: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"

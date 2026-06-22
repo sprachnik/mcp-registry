@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>MCP Server Registry — Discover Model Context Protocol Servers</title>
+  <meta name="title" content="MCP Server Registry — Discover Model Context Protocol Servers">
+  <meta name="description" content="Search and discover Model Context Protocol (MCP) servers. Browse thousands of MCP servers for AI, databases, APIs, file systems, and more. Built by James Stalley-Moores.">
+  <meta name="keywords" content="MCP, Model Context Protocol, MCP servers, AI tools, Claude, LLM, API integration, database tools, file system, search tools, MCP registry">
+  <meta name="author" content="James Stalley-Moores">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="1 days">
+  <meta name="theme-color" content="#4353ff">
+  <link rel="canonical" href="https://mcp-registry.netlify.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mcp-registry.netlify.app/">
+  <meta property="og:title" content="MCP Server Registry — Discover Model Context Protocol Servers">
+  <meta property="og:description" content="Search and discover thousands of Model Context Protocol (MCP) servers for AI, databases, APIs, file systems, and more.">
+  <meta property="og:site_name" content="MCP Server Registry">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mcp-registry.netlify.app/">
+  <meta name="twitter:title" content="MCP Server Registry — Discover Model Context Protocol Servers">
+  <meta name="twitter:description" content="Search and discover thousands of Model Context Protocol (MCP) servers for AI, databases, APIs, file systems, and more.">
+  <meta name="twitter:creator" content="@jamesmoores">
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "MCP Server Registry",
+    "description": "A searchable registry of Model Context Protocol servers for AI applications, databases, APIs, and more.",
+    "url": "https://mcp-registry.netlify.app/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "James Stalley-Moores",
+      "url": "https://www.linkedin.com/in/jamesmoores"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Model Context Protocol",
+      "description": "An open protocol that standardizes how applications provide context to LLMs"
+    }
+  }
+  </script>
+
+  <!-- Inter (graceful fallback to system fonts if blocked) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+  <style>
+    /* ============================================================
+       MCP Server Registry — design tokens
+       ============================================================ */
+    :root {
+      --text: #050038;
+      --muted: #848395;
+      --bg: #f4f5f7;
+      --surface: #ffffff;
+      --line: #dde0e2;
+      --primary: #4353ff;
+      --primary-strong: #2f3fe0;
+      --on-primary: #ffffff;
+
+      --accent-purple: #945ed8;
+      --accent-green: #09c18a;
+      --accent-coral: #f66c86;
+      --accent-orange: #f59050;
+      --accent-mustard: #fbbf32;
+
+      --pastel-pink: #ffb9e4;
+      --pastel-blue: #d7ecff;
+      --pastel-yellow: #f8e5a3;
+      --pastel-green: #adeed3;
+
+      --radius-sm: 4px;
+      --radius: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+
+      --shadow-sm: 0 4px 12px rgba(5, 0, 56, 0.06);
+      --shadow-md: 0 8px 24px rgba(5, 0, 56, 0.10);
+      --shadow-lg: 0 20px 48px rgba(5, 0, 56, 0.14);
+
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+      --maxw: 1180px;
+    }
+
+    [data-theme="dark"] {
+      --text: #f4f5f7;
+      --muted: #9a99ab;
+      --bg: #0c0a1f;
+      --surface: #16142e;
+      --line: #2a2747;
+      --primary: #7d87ff;
+      --primary-strong: #98a0ff;
+      --on-primary: #0c0a1f;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--primary); }
+
+    .container {
+      width: 100%;
+      max-width: var(--maxw);
+      margin-inline: auto;
+      padding-inline: 1.25rem;
+    }
+
+    /* ---------- Top bar ---------- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(180%) blur(12px);
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      height: 64px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      font-size: 1.05rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .brand .logo {
+      width: 32px; height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--primary), var(--accent-purple));
+      display: grid; place-items: center;
+      color: #fff; font-weight: 800; font-size: 0.95rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .topbar-actions { display: flex; align-items: center; gap: 0.4rem; }
+    .icon-btn {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      width: 40px; height: 40px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      display: grid; place-items: center;
+      transition: border-color .15s, transform .15s, background .15s;
+    }
+    .icon-btn:hover { border-color: var(--primary); transform: translateY(-1px); }
+    .icon-btn svg { width: 20px; height: 20px; }
+    .icon-btn .moon { display: none; }
+    [data-theme="dark"] .icon-btn .sun { display: none; }
+    [data-theme="dark"] .icon-btn .moon { display: block; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 4rem 0 3rem;
+      background:
+        radial-gradient(1200px 400px at 12% -10%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 60%),
+        radial-gradient(900px 380px at 92% 0%, color-mix(in srgb, var(--accent-purple) 20%, transparent), transparent 55%);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      margin: 0 0 0.75rem;
+    }
+    .hero h1 .grad {
+      background: linear-gradient(120deg, var(--primary), var(--accent-purple) 55%, var(--accent-coral));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero .lead {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--muted);
+      max-width: 60ch;
+      margin: 0 0 2rem;
+    }
+    .hero .lead strong { color: var(--text); font-weight: 700; }
+
+    /* ---------- Search ---------- */
+    .search-wrap {
+      position: relative;
+      max-width: 720px;
+    }
+    .search-wrap svg.search-icon {
+      position: absolute;
+      left: 1.1rem; top: 50%;
+      transform: translateY(-50%);
+      width: 22px; height: 22px;
+      color: var(--muted);
+      pointer-events: none;
+    }
+    #searchInput {
+      width: 100%;
+      font-family: var(--font);
+      font-size: 1.1rem;
+      color: var(--text);
+      background: var(--surface);
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1rem 3.4rem 1rem 3.1rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color .15s, box-shadow .15s;
+    }
+    #searchInput::placeholder { color: var(--muted); }
+    #searchInput:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 18%, transparent);
+    }
+    .search-kbd {
+      position: absolute;
+      right: 1rem; top: 50%;
+      transform: translateY(-50%);
+      display: flex; gap: 0.25rem;
+    }
+    .search-kbd kbd {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 0.15rem 0.4rem;
+    }
+    .search-clear {
+      position: absolute;
+      right: 1rem; top: 50%;
+      transform: translateY(-50%);
+      border: none; background: transparent;
+      color: var(--muted); cursor: pointer;
+      font-size: 1.3rem; line-height: 1;
+      display: none; padding: 0.25rem;
+    }
+    .search-clear:hover { color: var(--text); }
+
+    /* ---------- Controls ---------- */
+    main { padding-block: 2.5rem 4rem; }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .chip-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .chip {
+      appearance: none;
+      border: 1.5px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .chip:hover { border-color: var(--primary); }
+    .chip .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; opacity: 0.55; }
+    .chip[aria-pressed="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--on-primary);
+    }
+    .chip[aria-pressed="true"] .dot { opacity: 1; }
+
+    .spacer { flex: 1 1 auto; }
+
+    .sort-control { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .sort-control label { font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+    #sortBy {
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--surface);
+      border: 1.5px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.45rem 2rem 0.45rem 0.75rem;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23848395' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.6rem center;
+    }
+    #sortBy:focus { outline: none; border-color: var(--primary); }
+
+    .stats {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .stats strong { color: var(--text); font-weight: 700; }
+
+    /* ---------- Results grid ---------- */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .server-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      max-width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      animation: fadeIn .35s ease both;
+    }
+    .server-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: color-mix(in srgb, var(--primary) 45%, var(--line));
+    }
+    .server-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+    .server-card h3 a { color: var(--text); text-decoration: none; }
+    .server-card h3 a:hover { color: var(--primary); }
+
+    .server-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.9rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+    .server-meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
+
+    .server-description {
+      font-size: 0.92rem;
+      color: var(--text);
+      margin: 0 0 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+    }
+
+    .capabilities { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .capability-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+    }
+    .cap-tool     { background: color-mix(in srgb, var(--primary) 16%, transparent); color: var(--primary-strong); }
+    .cap-resource { background: color-mix(in srgb, var(--accent-green) 20%, transparent); color: #06795a; }
+    .cap-prompt   { background: color-mix(in srgb, var(--accent-purple) 20%, transparent); color: #6d3fae; }
+    [data-theme="dark"] .cap-resource { color: var(--accent-green); }
+    [data-theme="dark"] .cap-prompt   { color: #c7a6f0; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; }
+    .tag {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .tag:hover { color: var(--primary); border-color: var(--primary); }
+
+    .card-footer {
+      margin-top: auto;
+      padding-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+    .npm-package {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      color: var(--muted);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 0.3rem 0.5rem;
+      min-width: 0;
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .card-link {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--primary);
+      background: color-mix(in srgb, var(--primary) 10%, transparent);
+      border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+      border-radius: var(--radius);
+      padding: 0.35rem 0.7rem;
+      transition: background .15s, color .15s, transform .15s;
+      white-space: nowrap;
+    }
+    .card-link:hover {
+      background: var(--primary);
+      color: var(--on-primary);
+      transform: translateY(-1px);
+    }
+    .card-link svg { width: 15px; height: 15px; }
+
+    /* ---------- Expand-to-install ---------- */
+    .server-card.expandable { cursor: pointer; }
+    .server-card.expandable .install-panel,
+    .server-card.expandable a,
+    .server-card.expandable .tag,
+    .server-card.expandable .copy-btn { cursor: auto; }
+    .server-card.expandable a,
+    .server-card.expandable .tag,
+    .server-card.expandable .copy-btn,
+    .server-card.expandable .install-toggle { cursor: pointer; }
+    .server-card.expanded .server-description { -webkit-line-clamp: unset; }
+
+    .install-toggle {
+      margin-top: 0.9rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: transparent;
+      border: none;
+      border-top: 1px dashed var(--line);
+      padding: 0.75rem 0 0;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .install-toggle .chevron { width: 16px; height: 16px; transition: transform .2s; }
+    .server-card.expanded .install-toggle .chevron { transform: rotate(180deg); }
+
+    .install-panel {
+      display: none;
+      margin-top: 0.9rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--line);
+    }
+    .server-card.expanded .install-panel { display: block; animation: fadeIn .25s ease both; }
+
+    .install-section { margin-bottom: 1rem; }
+    .install-section:last-child { margin-bottom: 0; }
+    .install-section h4 {
+      margin: 0 0 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .install-section h4 .hint { font-weight: 500; text-transform: none; letter-spacing: 0; opacity: 0.8; }
+
+    .install-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .install-row:last-child { margin-bottom: 0; }
+    .reg-badge {
+      flex: 0 0 auto;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.45rem;
+      border-radius: var(--radius-sm);
+      background: color-mix(in srgb, var(--accent-purple) 16%, transparent);
+      color: var(--accent-purple);
+      min-width: 3.6rem;
+      text-align: center;
+    }
+    [data-theme="dark"] .reg-badge { color: #c7a6f0; }
+
+    .copy-row {
+      flex: 1 1 auto;
+      min-width: 0;
+      display: flex;
+      align-items: stretch;
+      gap: 0.4rem;
+    }
+    .copy-src {
+      flex: 1 1 auto;
+      min-width: 0;
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.6rem;
+      overflow-x: auto;
+      white-space: pre;
+    }
+    code.copy-src { white-space: nowrap; }
+    pre.copy-src { max-height: 220px; overflow: auto; }
+    .copy-btn {
+      flex: 0 0 auto;
+      align-self: flex-start;
+      font: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.6rem;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .copy-btn:hover { border-color: var(--primary); }
+    .copy-btn.copied { background: var(--accent-green); border-color: var(--accent-green); color: #fff; }
+
+    .env-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .env-var {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius-sm);
+      background: color-mix(in srgb, var(--accent-coral) 14%, transparent);
+      color: var(--text);
+      border: 1px solid color-mix(in srgb, var(--accent-coral) 30%, transparent);
+    }
+
+    mark {
+      background: color-mix(in srgb, var(--accent-mustard) 55%, transparent);
+      color: inherit;
+      border-radius: 3px;
+      padding: 0 0.1em;
+    }
+
+    /* ---------- Skeleton / states ---------- */
+    .skeleton-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      height: 220px;
+    }
+    .sk-line {
+      height: 12px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, var(--line) 25%, color-mix(in srgb, var(--line) 40%, transparent) 50%, var(--line) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      margin-bottom: 0.8rem;
+    }
+    @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--muted);
+    }
+    .no-results .big { font-size: 3rem; margin-bottom: 0.5rem; }
+
+    #loadSentinel { grid-column: 1 / -1; height: 1px; }
+    .loading-more {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: var(--muted);
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .spinner {
+      display: inline-block;
+      width: 18px; height: 18px;
+      border: 2.5px solid var(--line);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      vertical-align: -3px;
+      margin-right: 0.5rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+    /* ---------- Back to top ---------- */
+    #backToTop {
+      position: fixed;
+      right: 1.5rem; bottom: 1.5rem;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: var(--primary);
+      color: var(--on-primary);
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      display: grid; place-items: center;
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: opacity .2s, transform .2s, visibility .2s;
+      z-index: 40;
+    }
+    #backToTop.visible { opacity: 1; visibility: visible; transform: none; }
+    #backToTop:hover { background: var(--primary-strong); }
+
+    /* ---------- Footer ---------- */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2.5rem 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer .meta { font-size: 0.78rem; opacity: 0.85; margin-top: 0.5rem; }
+    footer code { font-family: var(--mono); }
+
+    .visually-hidden {
+      position: absolute; left: -9999px;
+      width: 1px; height: 1px; overflow: hidden;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 2.5rem 0 2rem; }
+      .results-grid { grid-template-columns: 1fr; }
+      .search-kbd { display: none; }
+      .container { padding-inline: 1rem; }
+      #searchInput { font-size: 1rem; padding: 0.85rem 1rem 0.85rem 2.9rem; }
+      .server-card { padding: 1.2rem; }
+      .card-footer { flex-wrap: wrap; }
+      #backToTop { right: 1rem; bottom: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <a class="brand" href="/" aria-label="MCP Server Registry home">
+        <span class="logo">M</span>
+        <span>MCP Registry</span>
+      </a>
+      <div class="topbar-actions">
+        <a class="icon-btn" href="https://github.com/sprachnik/mcp-registry" target="_blank" rel="noopener" aria-label="View source on GitHub" title="View on GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+        </a>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme" type="button">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <h1>Discover <span class="grad">MCP servers</span><br>for every workflow.</h1>
+      <p class="lead">
+        Search <strong id="serverCount">13,081</strong> Model Context Protocol servers —
+        for AI, databases, APIs, file systems, search, and more. Updated daily from the official registry.
+      </p>
+
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search by name, description, tags, or capabilities…"
+          autocomplete="off"
+          aria-label="Search MCP servers"
+        >
+        <div class="search-kbd" id="searchHint"><kbd>/</kbd></div>
+        <button class="search-clear" id="searchClear" aria-label="Clear search" type="button">&times;</button>
+      </div>
+
+      <!-- SEO-friendly hidden context -->
+      <div class="visually-hidden">
+        The MCP Server Registry is a comprehensive directory of Model Context Protocol (MCP) servers.
+        Find and integrate MCP servers for Claude AI, LLMs, file systems, databases, search engines,
+        APIs, web scraping, data analysis, and development tools. Browse our curated collection of
+        open-source and commercial MCP servers compatible with Anthropic Claude, ChatGPT, and other
+        AI assistants. Free to use for developers building AI applications.
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Filters and sorting -->
+    <div class="controls">
+      <div class="chip-group" role="group" aria-label="Filter by capability">
+        <button class="chip" id="filterTool" aria-pressed="false" type="button"><span class="dot" style="color:var(--primary)"></span>Tool</button>
+        <button class="chip" id="filterResource" aria-pressed="false" type="button"><span class="dot" style="color:var(--accent-green)"></span>Resource</button>
+        <button class="chip" id="filterPrompt" aria-pressed="false" type="button"><span class="dot" style="color:var(--accent-purple)"></span>Prompt</button>
+      </div>
+
+      <span class="spacer"></span>
+
+      <div class="sort-control">
+        <label for="sortBy">Sort</label>
+        <select id="sortBy" aria-label="Sort by">
+          <option value="relevance">Relevance</option>
+          <option value="name">Name (A–Z)</option>
+          <option value="name-desc">Name (Z–A)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats" id="stats" aria-live="polite">Loading servers…</div>
+
+    <!-- Results -->
+    <div id="results" class="results-grid" aria-live="polite">
+      <div class="skeleton-card"><div class="sk-line" style="width:60%"></div><div class="sk-line" style="width:40%"></div><div class="sk-line"></div><div class="sk-line" style="width:90%"></div><div class="sk-line" style="width:50%"></div></div>
+      <div class="skeleton-card"><div class="sk-line" style="width:60%"></div><div class="sk-line" style="width:40%"></div><div class="sk-line"></div><div class="sk-line" style="width:90%"></div><div class="sk-line" style="width:50%"></div></div>
+      <div class="skeleton-card"><div class="sk-line" style="width:60%"></div><div class="sk-line" style="width:40%"></div><div class="sk-line"></div><div class="sk-line" style="width:90%"></div><div class="sk-line" style="width:50%"></div></div>
+    </div>
+  </main>
+
+  <button id="backToTop" aria-label="Back to top" title="Back to top" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <footer>
+    <div class="container">
+      <p>
+        MCP Server Registry &mdash; powered by the <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">Model Context Protocol</a>
+      </p>
+      <p class="meta">
+        Built by <a href="https://www.linkedin.com/in/jamesmoores" target="_blank" rel="noopener">James Stalley-Moores</a> &bull;
+        Build <code id="buildId">28f7efe</code> &bull;
+        <span id="buildDate">loading…</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Theme bootstrap (runs before paint to avoid flash) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('mcp-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Build date from data file -->
+  <script>
+    fetch('data/all-servers.json', { method: 'GET' })
+      .then(r => r.json())
+      .then(data => {
+        if (data.generated) {
+          document.getElementById('buildDate').textContent = new Date(data.generated).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+          });
+        }
+      })
+      .catch(() => {
+        document.getElementById('buildDate').textContent = new Date().toLocaleDateString();
+      });
+  </script>
+
+  <!-- Fuse.js for fuzzy search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+
+  <!-- Main search script -->
+  <script src="js/search.js"></script>
+</body>
+</html>

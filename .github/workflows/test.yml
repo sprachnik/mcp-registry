@@ -1,0 +1,36 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Run tests
+        run: npm test
+
+      - name: Validate existing data
+        run: |
+          if [ -f data/all-servers.json ]; then
+            echo "✅ Validating existing server data..."
+            node scripts/validate-servers.js
+          else
+            echo "ℹ️  No existing data to validate"
+          fi
