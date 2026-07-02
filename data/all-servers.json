@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated": "2026-07-01T03:21:19.650Z",
-  "count": 14324,
+  "generated": "2026-07-02T03:19:12.773Z",
+  "count": 14508,
   "servers": [
     {
       "name": "io-github-wolfe-jam-claude-faf-mcp",
@@ -3815,6 +3815,31 @@
         {
           "type": "streamable-http",
           "url": "https://api.actiongate.xyz/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-burakfenerci5-actionproof",
+      "displayName": "ActionProof",
+      "description": "Verifiable receipts that prove what an AI agent did. Sign locally, verify anywhere, zero backend.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.Burakfenerci5/actionproof",
+      "version": "0.0.2",
+      "license": "MIT",
+      "repository": "https://github.com/Burakfenerci5/actionproof",
+      "homepage": "https://github.com/Burakfenerci5/actionproof",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "actionproof",
+          "version": "0.0.2"
         }
       ]
     },
@@ -10139,20 +10164,17 @@
     },
     {
       "name": "io-github-mikeypetrillo-agent402",
-      "displayName": "Agent402 — Pay Per Call Web Tools",
-      "description": "1000+ pay-per-call web tools for agents: search, browser, PDF, memory. x402 USDC or proof-of-work.",
+      "displayName": "Agent402.Tools — Pay Per Call Web Tools",
+      "description": "1,338 paid agent tools + 42 skill packs. USDC on Base + 3 more chains, or free via proof-of-work.",
       "author": "unknown",
       "capabilities": [
         "tool"
       ],
       "tags": [
-        "search",
-        "web",
-        "memory",
         "code"
       ],
       "npm_package": "io.github.MikeyPetrillo/agent402",
-      "version": "0.2.3",
+      "version": "0.10.0",
       "license": "MIT",
       "repository": "https://github.com/MikeyPetrillo/Agent402",
       "homepage": "https://agent402.tools",
@@ -10160,7 +10182,7 @@
         {
           "registry": "npm",
           "id": "agent402-mcp",
-          "version": "0.2.3",
+          "version": "0.10.0",
           "env": [
             {
               "name": "AGENT_KEY",
@@ -10178,6 +10200,12 @@
               "secret": false
             }
           ]
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://agent402.tools/mcp"
         }
       ]
     },
@@ -13700,6 +13728,30 @@
       ]
     },
     {
+      "name": "io-github-axiosdevs-agentpump-mcp",
+      "displayName": "Agentpump",
+      "description": "Launch & trade tokens on AgentPump, a Solana bonding-curve launchpad, from your AI agent.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.axiosdevs/agentpump-mcp",
+      "version": "1.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/axiosdevs/agentpump-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "agentpump-mcp",
+          "version": "1.1.1"
+        }
+      ]
+    },
+    {
       "name": "io-github-noviantonugroho4-agentq",
       "displayName": "AgentQ MCP Server",
       "description": "AgentQ MCP Server - AI-Powered Software Quality Assurance Platform",
@@ -15721,6 +15773,29 @@
       ]
     },
     {
+      "name": "io-github-garagon-mcp-aguara",
+      "displayName": "Aguara MCP",
+      "description": "Scan skills, MCP configs, and agent content for injection and supply-chain risks. Offline, no LLM.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.garagon/mcp-aguara",
+      "version": "0.8.0",
+      "license": "MIT",
+      "repository": "https://github.com/garagon/mcp-aguara",
+      "packages": [
+        {
+          "registry": "oci",
+          "id": "ghcr.io/garagon/mcp-aguara:0.8.0"
+        }
+      ]
+    },
+    {
       "name": "io-github-sshahzaiib-agy-bridge",
       "displayName": "Agy Bridge",
       "description": "Delegate heavy tasks from Claude Code to the Antigravity CLI (Gemini) with quota-aware failover.",
@@ -17128,6 +17203,58 @@
         {
           "type": "streamable-http",
           "url": "https://api.lazy-mac.com/ai-prompt-optimizer/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-0xddneto-ai-proof-of-us",
+      "displayName": "AI Proof Of Us",
+      "description": "Private signed AI task receipts with replay checks and optional validated AIPOU claims.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.0xddneto/ai-proof-of-us",
+      "version": "0.2.0",
+      "license": "MIT",
+      "repository": "https://github.com/0xddneto/AI-Proof-of-Us",
+      "homepage": "https://github.com/0xddneto/AI-Proof-of-Us",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "aipou-mcp-server",
+          "version": "0.2.0",
+          "env": [
+            {
+              "name": "AIPOU_AGENT_PRIVATE_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "AIPOU_CONTRACT_ADDRESS",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "AIPOU_CLAIMS_ADDRESS",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "AIPOU_RPC_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "AIPOU_DATA_DIR",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -22000,6 +22127,49 @@
       ]
     },
     {
+      "name": "io-github-altrsoftware-altr-mcp-server",
+      "displayName": "Altr Mcp Server",
+      "description": "MCP server for ALTR data security: databases, tags, policies, classification, access, audits",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "database",
+        "security",
+        "code"
+      ],
+      "npm_package": "io.github.altrsoftware/altr-mcp-server",
+      "version": "0.5.1",
+      "license": "MIT",
+      "repository": "https://github.com/altrsoftware/altr-mcp-server",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "altr-mcp",
+          "version": "0.5.1",
+          "runtime": "uvx",
+          "env": [
+            {
+              "name": "ORG_ID",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "MAPI_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "MAPI_SECRET",
+              "required": true,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-pipeworx-io-always-seven",
       "displayName": "Always Seven",
       "description": "always-seven MCP — wraps StupidAPIs (requires X-API-Key)",
@@ -25797,6 +25967,30 @@
           "registry": "pypi",
           "id": "api-docs-generator-ai-mcp",
           "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "com-apievangelist-api-evangelist",
+      "displayName": "Api Evangelist",
+      "description": "Sixteen years of API research as MCP tools — stories, areas, governance blocks & services",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "web"
+      ],
+      "npm_package": "com.apievangelist/api-evangelist",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/api-evangelist/apievangelist-aws",
+      "homepage": "https://developer.apievangelist.com",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.apievangelist.com/mcp"
         }
       ]
     },
@@ -30447,6 +30641,51 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/arcgis-mckinney/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-muend-arcgis-mcp-bridge",
+      "displayName": "ArcGIS MCP Bridge",
+      "description": "A secure, local-first MCP server exposing ArcGIS Pro's ArcPy engine over stdio JSON-RPC.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.muend/arcgis-mcp-bridge",
+      "version": "0.6.2",
+      "license": "MIT",
+      "repository": "https://github.com/muend/arcgis-mcp-bridge",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "arcgis-mcp-bridge",
+          "version": "0.6.2",
+          "env": [
+            {
+              "name": "ARCPY_PYTHON_PATH",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "ARCGIS_MCP_ALLOWED_ROOTS",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "ARCGIS_MCP_SCRATCH_GDB",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "ARCGIS_MCP_MAX_WORKERS",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -38027,6 +38266,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-australia-tenders",
+      "displayName": "Australia Tenders",
+      "description": "Australia Government Procurement MCP — AusTender OCDS (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/australia-tenders",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-australia-tenders",
+      "homepage": "https://pipeworx.io/packs/australia-tenders",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/australia-tenders/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-anthonypuggs-ausecon-mcp-server",
       "displayName": "Australian Economic Data (RBA & ABS)",
       "description": "Australian economic data (ABS + RBA): CPI, GDP, cash rate, labour, external sector.",
@@ -40732,6 +40994,29 @@
       "homepage": "https://crates.io/crates/axon-emcp"
     },
     {
+      "name": "ai-axonagentic-neuroautomata",
+      "displayName": "Axon NeuroAutomata",
+      "description": "Protein analysis: ESM-2/ESMC embeddings, mutation scoring, landscape scans, ESMFold structure.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "analytics"
+      ],
+      "npm_package": "ai.axonagentic/neuroautomata",
+      "version": "0.29.0",
+      "license": "MIT",
+      "homepage": "https://neuroautomata.axonagentic.ai",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.neuroautomata.axonagentic.ai/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-raysker-axon-research",
       "displayName": "Axon Research",
       "description": "AI agent ecosystem research, DeFi analysis, and market research tools",
@@ -42604,6 +42889,30 @@
       ]
     },
     {
+      "name": "io-github-michielinksee-bantou",
+      "displayName": "Bantou",
+      "description": "AI bookkeeping agent for Japanese accountants — auto-classifies freee/Yayoi/MF/TKC transactions.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.michielinksee/bantou",
+      "version": "0.2.2",
+      "license": "MIT",
+      "repository": "https://github.com/michielinksee/bantou",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@kansei-link/bantou",
+          "version": "0.2.2"
+        }
+      ]
+    },
+    {
       "name": "io-github-pipeworx-io-banxico",
       "displayName": "Banxico",
       "description": "Banxico MCP — Banco de México (Mexico's central bank) via the SIE API.",
@@ -43078,6 +43387,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-base64",
+      "displayName": "Base64",
+      "description": "Encoding MCP — Base64 / Base64URL / Base32 / Hex.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/base64",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-base64",
+      "homepage": "https://pipeworx.io/packs/base64",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/base64/mcp"
         }
       ]
     },
@@ -44385,6 +44717,30 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-virajmishra1-bench",
+      "displayName": "Bench Agent Discovery",
+      "description": "Discover public AI agents, reusable recipes, and trusted benchmark evidence by task.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.VirajMishra1/bench",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/VirajMishra1/bench",
+      "homepage": "https://bench.virajmishratakehome.workers.dev",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://bench.virajmishratakehome.workers.dev/mcp"
         }
       ]
     },
@@ -46671,6 +47027,32 @@
       ]
     },
     {
+      "name": "io-github-team23gm-bitcoin-mcp-server",
+      "displayName": "Bitcoin Mcp Server",
+      "description": "Honest monetary data for AI agents. Inflation, M2 vs CPI, Bitcoin vs dollar. No spin.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.Team23gm/bitcoin-mcp-server",
+      "version": "1.0.2",
+      "license": "MIT",
+      "repository": "https://github.com/team23gm/bitcoin-mcp-server",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@team23gm/bitcoin-mcp-server",
+          "version": "1.0.2",
+          "transport": "sse",
+          "url": "http://80.91.65.91:8082/sse"
+        }
+      ]
+    },
+    {
       "name": "com-coinbucha-bitcoin-signals",
       "displayName": "Bitcoin Signals",
       "description": "Signal-first Bitcoin intelligence: sovereign, hiring & hashrate signals over MCP.",
@@ -47671,6 +48053,42 @@
         {
           "type": "streamable-http",
           "url": "https://app.usebleep.com/api/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-emircbngl-blender-optics-simulator",
+      "displayName": "Blender Optics Simulator",
+      "description": "Build, align & render a real optical bench in Blender; drivable by an AI agent over MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.emircbngl/blender-optics-simulator",
+      "version": "0.24.2",
+      "license": "MIT",
+      "repository": "https://github.com/emircbngl/blender-optics-simulator",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "blender-optics-mcp",
+          "version": "0.24.2",
+          "env": [
+            {
+              "name": "OPTICS_BRIDGE_PORT",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OPTICS_BRIDGE_HOST",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -49917,6 +50335,27 @@
       ]
     },
     {
+      "name": "com-boothcheck-boothcheck",
+      "displayName": "Boothcheck",
+      "description": "What a stock's price is betting on: implied growth, duration, and margin from SEC filings. Free.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "com.boothcheck/boothcheck",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/Keenan-ux/boothcheck-mcp",
+      "homepage": "https://boothcheck.com",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://boothcheck.com/api/mcp"
+        }
+      ]
+    },
+    {
       "name": "com-getbooyah-booyah-index",
       "displayName": "Booyah Index",
       "description": "AI-readable directory of Bangkok restaurants and what each one is known for.",
@@ -51886,6 +52325,29 @@
           "version": "1.0.3",
           "transport": "streamable-http",
           "url": "https://brazil-law-mcp.vercel.app/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-brazil-pncp",
+      "displayName": "Brazil Pncp",
+      "description": "Brazil PNCP MCP — Brazilian government procurement (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/brazil-pncp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-brazil-pncp",
+      "homepage": "https://pipeworx.io/packs/brazil-pncp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/brazil-pncp/mcp"
         }
       ]
     },
@@ -56486,6 +56948,52 @@
       ]
     },
     {
+      "name": "io-github-caelum29-calibre-mcp",
+      "displayName": "Calibre",
+      "description": "Calibre ebook library server: search, read content, curate metadata, semantic search, gated writes.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.caelum29/calibre-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/caelum29/calibre-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "calibre-mcp",
+          "version": "0.1.0",
+          "env": [
+            {
+              "name": "CALIBRE_MCP_SERVER_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "CALIBRE_MCP_LIBRARY",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "CALIBRE_MCP_ENABLE_WRITE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "CALIBRE_MCP_CALIBREDB_PATH",
+              "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "co-haveny-california-hoa-law",
       "displayName": "California Hoa Law",
       "description": "California HOA law tools (Davis-Stirling Act): statute lookup, fine checker, letter templates.",
@@ -56814,6 +57322,48 @@
               "name": "CALLTOUCH_TOKEN",
               "required": true,
               "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-topness-msft-callwright",
+      "displayName": "Callwright",
+      "description": "Self-hosted MCP voice agent that places phone calls on your behalf via Retell.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.topness-msft/callwright",
+      "version": "1.0.1",
+      "license": "MIT",
+      "repository": "https://github.com/topness-msft/callwright",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "callwright",
+          "version": "1.0.1",
+          "transport": "streamable-http",
+          "url": "http://localhost:8787/mcp",
+          "env": [
+            {
+              "name": "RETELL_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "MCP_AUTH_TOKEN",
+              "required": false,
+              "secret": true
+            },
+            {
+              "name": "PORT",
+              "required": false,
+              "secret": false
             }
           ]
         }
@@ -57266,6 +57816,29 @@
           "id": "canada-aida-ai-mcp",
           "version": "1.0.14",
           "runtime": "python"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-canada-tenders",
+      "displayName": "Canada Tenders",
+      "description": "Canada Government Procurement MCP — CanadaBuys open data (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/canada-tenders",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-canada-tenders",
+      "homepage": "https://pipeworx.io/packs/canada-tenders",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/canada-tenders/mcp"
         }
       ]
     },
@@ -58753,6 +59326,37 @@
       ]
     },
     {
+      "name": "io-github-joyall-au-cardossier-market-api",
+      "displayName": "Cardossier Market Api",
+      "description": "Polish used car market API: valuations, price history, liquidity & regional data. 2M+ listings.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.Joyall-au/cardossier-market-api",
+      "version": "1.0.1",
+      "license": "MIT",
+      "repository": "https://github.com/Joyall-au/cardossier-mcp-server",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "cardossier-mcp-server",
+          "version": "1.0.1",
+          "env": [
+            {
+              "name": "CARDOSSIER_API_KEY",
+              "required": true,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-csoai-org-care-home-cqc-mcp",
       "displayName": "Care Home Cqc",
       "description": "UK Care Quality Commission (CQC) Single Assessment Framework compliance for care homes. AI-assisted",
@@ -59793,6 +60397,25 @@
       ]
     },
     {
+      "name": "live-catchaset-catchaset",
+      "displayName": "Catchaset",
+      "description": "Live-music shows in Austin & Chicago matched to your taste (pass artists you like).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "live.catchaset/catchaset",
+      "version": "1.0.0",
+      "license": "MIT",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://catchaset.live/mcp"
+        }
+      ]
+    },
+    {
       "name": "com-catchdoms-expired-domains",
       "displayName": "CatchDoms — Expired Domains API",
       "description": "Search 40K+ expired domains from 12 auction platforms with SEO metrics and scores.",
@@ -60360,7 +60983,7 @@
       ]
     },
     {
-      "name": "io-github-cdatacam-connect-ai",
+      "name": "com-cdata-cdata-connect-ai",
       "displayName": "CData Connect AI",
       "description": "Cloud-hosted MCP server for secure AI access to enterprise data sources via CData Connect AI.",
       "author": "unknown",
@@ -60369,13 +60992,11 @@
       ],
       "tags": [
         "ai",
-        "cloud",
-        "code"
+        "cloud"
       ],
-      "npm_package": "io.github.cdatacam/connect-ai",
+      "npm_package": "com.cdata/cdata-connect-ai",
       "version": "1.0.0",
       "license": "MIT",
-      "repository": "https://github.com/cdatacam/connect-ai",
       "remotes": [
         {
           "type": "streamable-http",
@@ -61478,6 +62099,36 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/cftc-cot/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-neosyn-cg-agent-kit",
+      "displayName": "Cg Agent Kit",
+      "description": "AI-agent MCP server for FPGA design: compile, validate & generate Verilog from C⏚ HDL.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "io.neosyn/cg-agent-kit",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/Neosyn-Logic/cg-agent-kit",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "cg-agent-kit",
+          "version": "0.1.1",
+          "env": [
+            {
+              "name": "CG_JAR",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -63513,6 +64164,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-chile-procurement",
+      "displayName": "Chile Procurement",
+      "description": "Chile Government Procurement MCP — Mercado Público / ChileCompra (keyless-ish).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/chile-procurement",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-chile-procurement",
+      "homepage": "https://pipeworx.io/packs/chile-procurement",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/chile-procurement/mcp"
+        }
+      ]
+    },
+    {
       "name": "eu-ansvar-chilean-law-mcp",
       "displayName": "Chilean Law",
       "description": "Chilean legislation via MCP — full-text search across statutes and provisions",
@@ -64862,6 +65536,67 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/cisa-kev/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-wyre-technology-meraki-mcp",
+      "displayName": "Cisco Meraki",
+      "description": "MCP server for the Cisco Meraki Dashboard: networks, devices, wireless, switch, appliance.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "network",
+        "code"
+      ],
+      "npm_package": "io.github.wyre-technology/meraki-mcp",
+      "version": "1.0.2",
+      "license": "MIT",
+      "repository": "https://github.com/wyre-technology/meraki-mcp",
+      "homepage": "https://github.com/wyre-technology/meraki-mcp",
+      "packages": [
+        {
+          "registry": "oci",
+          "id": "ghcr.io/wyre-technology/meraki-mcp:v1.0.2",
+          "env": [
+            {
+              "name": "MERAKI_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "MERAKI_ORG_ID",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MERAKI_BASE_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "READ_ONLY_MODE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MCP_TRANSPORT",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "AUTH_MODE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "LOG_LEVEL",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -67792,6 +68527,26 @@
       ]
     },
     {
+      "name": "com-clearpostplugin-wordpress-seo",
+      "displayName": "ClearPost: WordPress SEO Agent",
+      "description": "SEO agent for WordPress. Grows your organic traffic on autopilot. 12 tools, zero configuration.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "com.clearpostplugin/wordpress-seo",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://clearpostplugin.com/mcp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://{site_domain}/wp-json/clearpost/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-codespar-mcp-clearsale",
       "displayName": "Clearsale",
       "description": "MCP server for ClearSale — Brazilian fraud prevention, order risk scoring, device fingerprinting",
@@ -68180,7 +68935,7 @@
     {
       "name": "io-github-treevu-ai-cli-market-world",
       "displayName": "Cli Market World",
-      "description": "Commerce for AI agents. 36 MCP tools across 30 retailers in 7 countries.",
+      "description": "Commerce for AI agents. 31 MCP tools. 80 retailers (40 verified), 8 countries, 4 platforms.",
       "author": "unknown",
       "capabilities": [
         "tool"
@@ -68190,14 +68945,26 @@
         "code"
       ],
       "npm_package": "io.github.Treevu-ai/cli-market-world",
-      "version": "1.4.3",
+      "version": "1.11.5",
       "license": "MIT",
       "repository": "https://github.com/Treevu-ai/cli-market-world",
       "packages": [
         {
           "registry": "pypi",
-          "id": "cli-market",
-          "version": "1.4.3"
+          "id": "cli-market-world",
+          "version": "1.11.5",
+          "env": [
+            {
+              "name": "MARKET_API_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MCP_TOOL_PROFILE",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -76456,6 +77223,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-colombia-secop",
+      "displayName": "Colombia Secop",
+      "description": "Colombia SECOP MCP — Colombian government procurement (public contracting).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/colombia-secop",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-colombia-secop",
+      "homepage": "https://pipeworx.io/packs/colombia-secop",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/colombia-secop/mcp"
+        }
+      ]
+    },
+    {
       "name": "eu-ansvar-colombian-law-mcp",
       "displayName": "Colombian Law",
       "description": "Colombian legislation via MCP — full-text search across statutes and provisions",
@@ -76476,6 +77266,29 @@
           "registry": "npm",
           "id": "@ansvar/colombian-law-mcp",
           "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-color",
+      "displayName": "Color",
+      "description": "Color utilities MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/color",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-color",
+      "homepage": "https://pipeworx.io/packs/color",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/color/mcp"
         }
       ]
     },
@@ -77004,6 +77817,28 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/comicvine/mcp"
+        }
+      ]
+    },
+    {
+      "name": "today-lmk-commerce",
+      "displayName": "Commerce",
+      "description": "Cross-merchant product search with real price history, comparisons, and demand signals.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search"
+      ],
+      "npm_package": "today.lmk/commerce",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://lmk.today/mcp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://lmk.today/api/ucp/mcp"
         }
       ]
     },
@@ -78599,6 +79434,35 @@
           "registry": "pypi",
           "id": "conduct-cli",
           "version": "0.6.10"
+        }
+      ]
+    },
+    {
+      "name": "io-github-mostov82-conducted-mcp",
+      "displayName": "Conducted MCP",
+      "description": "Stateless advisor + validator for Conducted Development: kickoff, artifact validation, rule checks.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.Mostov82/conducted-mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/Mostov82/conducted-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "conducted-mcp",
+          "version": "0.1.1"
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://conducted-mcp.jonathanmostov.workers.dev/mcp"
         }
       ]
     },
@@ -82983,6 +83847,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-coordinates",
+      "displayName": "Coordinates",
+      "description": "Coordinate geometry MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/coordinates",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-coordinates",
+      "homepage": "https://pipeworx.io/packs/coordinates",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/coordinates/mcp"
+        }
+      ]
+    },
+    {
       "name": "com-olane-copass-local",
       "displayName": "Copass Local",
       "description": "Local encryption and project setup plugin for Copass. Keys never leave your machine.",
@@ -83354,7 +84241,7 @@
     },
     {
       "name": "io-github-coreason-ai-coreason-ecosystem",
-      "displayName": "CoReason Ecosystem ��� Federated MCP Gateway",
+      "displayName": "CoReason Ecosystem — Federated MCP Gateway",
       "description": "CoReason Tripartite Architecture Governance Plane. Stateless zero-trust federated MCP gateway.",
       "author": "unknown",
       "capabilities": [
@@ -83472,6 +84359,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-coresignal",
+      "displayName": "Coresignal",
+      "description": "Coresignal MCP — LinkedIn-adjacent company + employee data (coresignal.com)",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/coresignal",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-coresignal",
+      "homepage": "https://pipeworx.io/packs/coresignal",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/coresignal/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-pipeworx-io-corporate-apology",
       "displayName": "Corporate Apology",
       "description": "corporate-apology MCP — wraps StupidAPIs (requires X-API-Key)",
@@ -83513,6 +84423,31 @@
         {
           "type": "streamable-http",
           "url": "https://mcp2.corpusiq.io/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-sebastienrousseau-corral",
+      "displayName": "Corral",
+      "description": "Query your Corral-organised local mirror of cloned GitHub repositories. Zero network calls.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "network",
+        "code"
+      ],
+      "npm_package": "io.github.sebastienrousseau/corral",
+      "version": "0.0.10",
+      "license": "MIT",
+      "repository": "https://github.com/sebastienrousseau/corral",
+      "homepage": "https://doc.corrallib.com",
+      "packages": [
+        {
+          "registry": "oci",
+          "id": "ghcr.io/sebastienrousseau/corral:0.0.10"
         }
       ]
     },
@@ -85511,6 +86446,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-crc",
+      "displayName": "Crc",
+      "description": "Checksum MCP — CRC-32 & Adler-32.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/crc",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-crc",
+      "homepage": "https://pipeworx.io/packs/crc",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/crc/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-zwondra-cre-intelligence-mcp",
       "displayName": "CRE Intelligence",
       "description": "Live CRE analysis: Federal Reserve rates, Census 1/3/5-mile demographics, DCF models, IC memos.",
@@ -86789,6 +87747,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-crontab",
+      "displayName": "Crontab",
+      "description": "Crontab expression MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/crontab",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-crontab",
+      "homepage": "https://pipeworx.io/packs/crontab",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/crontab/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-br0ski777-crontab-generator",
       "displayName": "Crontab Generator API",
       "description": "Natural language to cron expression converter. x402 micropayment.",
@@ -86808,6 +87789,29 @@
         {
           "type": "sse",
           "url": "https://crontab-generator-x402-production.up.railway.app/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-artem1981777-cronus-mcp",
+      "displayName": "Cronus",
+      "description": "On-chain x402-paid market signals on Arc (Circle Gateway) exposed as MCP tools.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.Artem1981777/cronus-mcp",
+      "version": "0.2.0",
+      "license": "MIT",
+      "repository": "https://github.com/Artem1981777/cronus-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "cronus-mcp",
+          "version": "0.2.0"
         }
       ]
     },
@@ -87201,6 +88205,30 @@
         {
           "type": "streamable-http",
           "url": "https://api.crosswire-api.com/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-topness-msft-crowdhum",
+      "displayName": "Crowdhum",
+      "description": "Live-polling MCP for consultants: author polls, run live rooms, read back results and recaps.",
+      "author": "unknown",
+      "capabilities": [
+        "tool",
+        "resource"
+      ],
+      "tags": [
+        "security",
+        "code"
+      ],
+      "npm_package": "io.github.topness-msft/crowdhum",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/topness-msft/crowdhum",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.crowdhum.com"
         }
       ]
     },
@@ -88568,6 +89596,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-csv",
+      "displayName": "Csv",
+      "description": "CSV <-> JSON MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/csv",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-csv",
+      "homepage": "https://pipeworx.io/packs/csv",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/csv/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-csoai-org-csv-analytics-mcp",
       "displayName": "Csv Analytics",
       "description": "MCP server for csv analytics. Features load csv, query data, describe columns. From MEOK AI ...",
@@ -89454,6 +90505,29 @@
         {
           "type": "streamable-http",
           "url": "https://currency_converter_mcp.mcpize.run/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-currencyformat",
+      "displayName": "Currencyformat",
+      "description": "Number & currency formatting MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/currencyformat",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-currencyformat",
+      "homepage": "https://pipeworx.io/packs/currencyformat",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/currencyformat/mcp"
         }
       ]
     },
@@ -91377,6 +92451,27 @@
         {
           "type": "streamable-http",
           "url": "https://app.daedalmap.com/mcp/wildfires"
+        }
+      ]
+    },
+    {
+      "name": "com-daedalmap-world-development-indicators",
+      "displayName": "DaedalMap World Development Indicators",
+      "description": "World Bank World Development Indicators: curated country-year economy, health, education and more.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "com.daedalmap/world-development-indicators",
+      "version": "1.0.1",
+      "license": "MIT",
+      "repository": "https://github.com/xyver/daedal-map",
+      "homepage": "https://www.daedalmap.com",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://app.daedalmap.com/mcp/world_bank_wdi"
         }
       ]
     },
@@ -94968,6 +96063,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-datalastic",
+      "displayName": "Datalastic",
+      "description": "Datalastic MCP — live AIS vessel positions (datalastic.com)",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/datalastic",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-datalastic",
+      "homepage": "https://pipeworx.io/packs/datalastic",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/datalastic/mcp"
+        }
+      ]
+    },
+    {
       "name": "com-datalastic-vessel-tracking",
       "displayName": "Datalastic Vessel Tracking & Maritime Intelligence",
       "description": "Vessel tracking for 750,000+ ships, with ownership, inspections, port records, routes, and more.",
@@ -95362,6 +96480,29 @@
           "registry": "pypi",
           "id": "date-calculator-ai-mcp",
           "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-datecalc",
+      "displayName": "Datecalc",
+      "description": "Date calculator MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/datecalc",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-datecalc",
+      "homepage": "https://pipeworx.io/packs/datecalc",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/datecalc/mcp"
         }
       ]
     },
@@ -103230,6 +104371,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-diff",
+      "displayName": "Diff",
+      "description": "Text diff MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/diff",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-diff",
+      "homepage": "https://pipeworx.io/packs/diff",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/diff/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-ryudi84-diff",
       "displayName": "Diff",
       "description": "MCP server for computing text diffs, comparing strings, and generating unified diff output.",
@@ -103343,6 +104507,31 @@
         {
           "type": "streamable-http",
           "url": "https://api.lazy-mac.com/diff-patch-tools/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-diffbot",
+      "displayName": "Diffbot",
+      "description": "Diffbot MCP — Knowledge Graph company enrichment + web content extraction (diffbot.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool",
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/diffbot",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-diffbot",
+      "homepage": "https://pipeworx.io/packs/diffbot",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/diffbot/mcp"
         }
       ]
     },
@@ -110690,6 +111879,32 @@
       ]
     },
     {
+      "name": "io-github-lorismascio17-droste-memory",
+      "displayName": "Droste",
+      "description": "Local code-memory graph for AI coding agents.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "memory",
+        "code"
+      ],
+      "npm_package": "io.github.lorismascio17/droste-memory",
+      "version": "1.1.2",
+      "license": "MIT",
+      "repository": "https://github.com/lorismascio17/droste-memory",
+      "homepage": "https://github.com/lorismascio17/droste-memory",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "droste-memory",
+          "version": "1.1.2"
+        }
+      ]
+    },
+    {
       "name": "io-github-rabyavalla-drug-food-interactions",
       "displayName": "Drug Food Interactions",
       "description": "Food-drug interaction and nutrient depletion checks for 30+ common medications.",
@@ -111024,6 +112239,31 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-duffel",
+      "displayName": "Duffel",
+      "description": "Duffel MCP — live flight search + pricing via the Duffel Flights API (duffel.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/duffel",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-duffel",
+      "homepage": "https://pipeworx.io/packs/duffel",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/duffel/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-pduggusa-dugganusa-cli",
       "displayName": "DugganUSA CLI — Local STDIO MCP",
       "description": "Local STDIO MCP for DugganUSA threat intel. 1.13M IOCs. Read-only. npm: dugganusa-cli.",
@@ -111241,6 +112481,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-duration",
+      "displayName": "Duration",
+      "description": "ISO 8601 duration MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/duration",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-duration",
+      "homepage": "https://pipeworx.io/packs/duration",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/duration/mcp"
         }
       ]
     },
@@ -112503,24 +113766,23 @@
     {
       "name": "io-github-oaslananka-easyeda-mcp-pro",
       "displayName": "Easyeda Mcp Pro",
-      "description": "MCP server for EasyEDA Pro: PCB design, BOM sourcing, and AI-assisted hardware review.",
+      "description": "MCP server for EasyEDA Pro: PCB inspection, BOM, exports, and hardware review.",
       "author": "unknown",
       "capabilities": [
         "tool"
       ],
       "tags": [
-        "ai",
         "code"
       ],
       "npm_package": "io.github.oaslananka/easyeda-mcp-pro",
-      "version": "0.2.0",
+      "version": "0.10.0",
       "license": "MIT",
       "repository": "https://github.com/oaslananka/easyeda-mcp-pro",
       "packages": [
         {
           "registry": "npm",
           "id": "easyeda-mcp-pro",
-          "version": "0.2.0",
+          "version": "0.10.0",
           "env": [
             {
               "name": "NODE_ENV",
@@ -112534,6 +113796,11 @@
             },
             {
               "name": "TOOL_PROFILE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MCP_PROTOCOL_VERSION",
               "required": false,
               "secret": false
             },
@@ -112553,6 +113820,46 @@
               "secret": false
             },
             {
+              "name": "HTTP_AUTH_DISABLED",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "HTTP_RATE_LIMIT_MAX",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "CORS_ORIGIN",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "ALLOWED_ORIGINS",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MCP_TASKS_ENABLED",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MCP_APPS_ENABLED",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MCP_V2_EXPERIMENTAL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "MCP_RAW_EXEC_EXPERIMENTAL",
+              "required": false,
+              "secret": false
+            },
+            {
               "name": "BRIDGE_HOST",
               "required": false,
               "secret": false
@@ -112563,12 +113870,97 @@
               "secret": false
             },
             {
+              "name": "BRIDGE_PORT_SCAN",
+              "required": false,
+              "secret": false
+            },
+            {
               "name": "BRIDGE_TIMEOUT_MS",
               "required": false,
               "secret": false
             },
             {
+              "name": "BRIDGE_HEARTBEAT_MS",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "BRIDGE_RECONNECT_MAX_ATTEMPTS",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "BRIDGE_WAIT_FOR_EDA_MS",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "BRIDGE_MAX_PAYLOAD_SIZE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "BRIDGE_TOKEN",
+              "required": false,
+              "secret": true
+            },
+            {
+              "name": "EASYEDA_DEV_BRIDGE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "BRIDGE_RAW_EXEC_ENABLED",
+              "required": false,
+              "secret": false
+            },
+            {
               "name": "DATA_DIR",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "SQLITE_PATH",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "ARTIFACT_DIR",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "CACHE_DIR",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "AI_PROVIDER",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "AI_MODEL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "AI_API_KEY",
+              "required": false,
+              "secret": true
+            },
+            {
+              "name": "AI_MAX_TOKENS",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "AI_TIMEOUT_MS",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "AI_ALLOW_DESIGN_MUTATIONS",
               "required": false,
               "secret": false
             },
@@ -112588,9 +113980,59 @@
               "secret": true
             },
             {
+              "name": "JLCPCB_API_BASE_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "JLCPCB_ENABLE_ORDERING",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "JLCPCB_DEFAULT_CURRENCY",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "JLCSEARCH_ENABLED",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "JLCSEARCH_BASE_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "LCSC_API_KEY",
+              "required": false,
+              "secret": true
+            },
+            {
+              "name": "LCSC_API_SECRET",
+              "required": false,
+              "secret": true
+            },
+            {
+              "name": "MOUSER_ENABLED",
+              "required": false,
+              "secret": false
+            },
+            {
               "name": "MOUSER_API_KEY",
               "required": false,
               "secret": true
+            },
+            {
+              "name": "MOUSER_API_BASE_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "DIGIKEY_ENABLED",
+              "required": false,
+              "secret": false
             },
             {
               "name": "DIGIKEY_CLIENT_ID",
@@ -112603,14 +114045,19 @@
               "secret": true
             },
             {
-              "name": "LCSC_API_KEY",
+              "name": "DIGIKEY_SANDBOX",
               "required": false,
-              "secret": true
+              "secret": false
             },
             {
-              "name": "AI_API_KEY",
+              "name": "DIGIKEY_LOCALE",
               "required": false,
-              "secret": true
+              "secret": false
+            },
+            {
+              "name": "DIGIKEY_CURRENCY",
+              "required": false,
+              "secret": false
             },
             {
               "name": "OAUTH_ENABLED",
@@ -112618,7 +114065,42 @@
               "secret": false
             },
             {
+              "name": "OAUTH_ISSUER",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OAUTH_AUDIENCE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OAUTH_JWKS_URI",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OAUTH_REQUIRED_SCOPES",
+              "required": false,
+              "secret": false
+            },
+            {
               "name": "OTEL_ENABLED",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OTEL_SERVICE_NAME",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "TRACE_SAMPLE_RATE",
               "required": false,
               "secret": false
             }
@@ -112658,6 +114140,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-easypost",
+      "displayName": "Easypost",
+      "description": "EasyPost MCP — multi-carrier shipping rates + package tracking (easypost.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/easypost",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-easypost",
+      "homepage": "https://pipeworx.io/packs/easypost",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/easypost/mcp"
         }
       ]
     },
@@ -113517,6 +115022,77 @@
       ]
     },
     {
+      "name": "io-github-carruda-global-ecosystem-aec-erp",
+      "displayName": "Ecosystem Aec Erp",
+      "description": "Compliance tools for Dynamics 365, Salesforce, Oracle, SAP and Power BI integrations",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "crm",
+        "code"
+      ],
+      "npm_package": "io.github.carruda-Global/ecosystem-aec-erp",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/carruda-Global/engenheiro-producao-ai",
+      "homepage": "https://global-engenharia.com/ecosystem",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://engenheiro-producao-ai.onrender.com/mcp/erp/sse"
+        }
+      ]
+    },
+    {
+      "name": "io-github-carruda-global-ecosystem-aec-esg",
+      "displayName": "Ecosystem Aec Esg",
+      "description": "ESG/IFRS S1-S2 diagnostics, carbon inventory Scope 1-3, CBAM certificate generation",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.carruda-Global/ecosystem-aec-esg",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/carruda-Global/engenheiro-producao-ai",
+      "homepage": "https://global-engenharia.com/ecosystem",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://engenheiro-producao-ai.onrender.com/mcp/esg/sse"
+        }
+      ]
+    },
+    {
+      "name": "io-github-carruda-global-ecosystem-aec-regulatory",
+      "displayName": "Ecosystem Aec Regulatory",
+      "description": "NR-1 psychosocial risk, LGPD, whistleblower, pay equity & anti-corruption tools (Brazil)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "social",
+        "code"
+      ],
+      "npm_package": "io.github.carruda-Global/ecosystem-aec-regulatory",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/carruda-Global/engenheiro-producao-ai",
+      "homepage": "https://global-engenharia.com/ecosystem",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://engenheiro-producao-ai.onrender.com/mcp/regulatory/sse"
+        }
+      ]
+    },
+    {
       "name": "org-memoryapi-monitor",
       "displayName": "Ecosystem Monitor",
       "description": "Ecosystem monitoring: service status and x402 activity metrics",
@@ -113562,6 +115138,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-ecuador-procurement",
+      "displayName": "Ecuador Procurement",
+      "description": "Ecuador Government Procurement MCP — SERCOP / Compras Públicas (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/ecuador-procurement",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-ecuador-procurement",
+      "homepage": "https://pipeworx.io/packs/ecuador-procurement",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/ecuador-procurement/mcp"
+        }
+      ]
+    },
+    {
       "name": "eu-ansvar-ecuadorian-law-mcp",
       "displayName": "Ecuadorian Law",
       "description": "Ecuador legislation via MCP -- full-text search across statutes and provisions",
@@ -113589,6 +115188,30 @@
           "version": "1.0.0",
           "transport": "streamable-http",
           "url": "https://ecuadorian-law-mcp.vercel.app/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-ecocitizenz-ecz-id-mcp-verifier",
+      "displayName": "Ecz Id Mcp Verifier",
+      "description": "Local-first, read-only ECZ-ID verifier over MCP (stdio): checks, reports, explains, routes.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.Ecocitizenz/ecz-id-mcp-verifier",
+      "version": "0.8.2",
+      "license": "MIT",
+      "repository": "https://github.com/Ecocitizenz/ecz-id-mcp-verifier",
+      "homepage": "https://developers.ecocitizenz.com",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@ecocitizenz/ecz-id-mcp-verifier",
+          "version": "0.8.2"
         }
       ]
     },
@@ -114314,7 +115937,7 @@
     {
       "name": "io-github-codespar-mcp-efi",
       "displayName": "Efi",
-      "description": "MCP server for EFI (Gerencianet) — Pix, charges, carnets, cobranças",
+      "description": "MCP server for EFI (Gerencianet) — Pix, charges, carnets, cobran��as",
       "author": "unknown",
       "capabilities": [
         "tool"
@@ -116896,6 +118519,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-emailable",
+      "displayName": "Emailable",
+      "description": "Emailable MCP — wraps the Emailable email verification API (emailable.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/emailable",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-emailable",
+      "homepage": "https://pipeworx.io/packs/emailable",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/emailable/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-emailens-mcp",
       "displayName": "Emailens MCP",
       "description": "Email compatibility analysis across 15 clients — preview, audit, fix, diff, deliverability.",
@@ -117241,6 +118888,29 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.emile.wine/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-emoji",
+      "displayName": "Emoji",
+      "description": "Emoji MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/emoji",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-emoji",
+      "homepage": "https://pipeworx.io/packs/emoji",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/emoji/mcp"
         }
       ]
     },
@@ -118443,6 +120113,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-ens",
+      "displayName": "Ens",
+      "description": "ENS (Ethereum Name Service) MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/ens",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-ens",
+      "homepage": "https://pipeworx.io/packs/ens",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/ens/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-br0ski777-ens-resolver",
       "displayName": "ENS Resolver API",
       "description": "Resolve ENS names to Ethereum addresses and reverse. x402 micropayment.",
@@ -119242,6 +120935,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-eodhd",
+      "displayName": "Eodhd",
+      "description": "EODHD MCP — wraps EOD Historical Data (eodhd.com)",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/eodhd",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-eodhd",
+      "homepage": "https://pipeworx.io/packs/eodhd",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/eodhd/mcp"
         }
       ]
     },
@@ -126851,6 +128567,43 @@
       ]
     },
     {
+      "name": "io-github-grichardomi-faxseal",
+      "displayName": "FaxSeal",
+      "description": "Send, receive, and verify faxes from AI assistants and agents via FaxSeal.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.grichardomi/faxseal",
+      "version": "2.0.1",
+      "license": "MIT",
+      "repository": "https://github.com/grichardomi/mcp-server",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "faxseal-mcp",
+          "version": "2.0.1",
+          "env": [
+            {
+              "name": "FAXSEAL_API_KEY",
+              "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp-server-production-8f66.up.railway.app/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-pipeworx-io-fbi-artcrimes",
       "displayName": "Fbi Artcrimes",
       "description": "FBI Art Crimes MCP — FBI National Stolen Art File (free, no auth).",
@@ -131078,6 +132831,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-findymail",
+      "displayName": "Findymail",
+      "description": "Findymail MCP — B2B email finder & reverse-email lookup (findymail.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/findymail",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-findymail",
+      "homepage": "https://pipeworx.io/packs/findymail",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/findymail/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-fingerprintjs-fingerprint-mcp-server",
       "displayName": "Fingerprint",
       "description": "Device intelligence for AI agents: Fingerprint events, smart signals, and API key management.",
@@ -131896,6 +133673,30 @@
       ]
     },
     {
+      "name": "io-github-first-touch-inc-mcp",
+      "displayName": "FirstTouch",
+      "description": "Give AI agents real hands on LinkedIn: sourcing, AI qualification, HubSpot-native attribution.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.First-Touch-Inc/mcp",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/First-Touch-Inc/mcp",
+      "homepage": "https://www.firsttouch.com/mcp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.firsttouch.ai"
+        }
+      ]
+    },
+    {
       "name": "br-com-brasilnfe-fiscal",
       "displayName": "Fiscal",
       "description": "Brazilian fiscal MCP server - issue NF-e, NFC-e, NFS-e, CT-e, MDF-e and DC-e via SEFAZ.",
@@ -132081,6 +133882,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-dropflyai-fitfly-engine",
+      "displayName": "Fitfly Engine",
+      "description": "Deterministic fitness coaching engine: adaptive programs, progression math, readiness autoregulation",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.dropflyai/fitfly-engine",
+      "version": "0.2.0",
+      "license": "MIT",
+      "repository": "https://github.com/dropflyai/fitfly-engine",
+      "homepage": "https://workout-engine-production-5dd7.up.railway.app/connect",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://workout-engine-production-5dd7.up.railway.app/mcp"
         }
       ]
     },
@@ -132960,6 +134784,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-lfaykus-flatway-estimate",
+      "displayName": "FlatWay Property Estimator",
+      "description": "Property price estimates for any French address, street, or city using real DVF data.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.Lfaykus/flatway-estimate",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/Lfaykus/flatway-estimate",
+      "homepage": "https://flatway.fr",
+      "remotes": [
+        {
+          "type": "sse",
+          "url": "https://visitor-awry-mandarin.ngrok-free.dev/sse"
         }
       ]
     },
@@ -134772,6 +136619,29 @@
           "registry": "npm",
           "id": "fonparam-mcp",
           "version": "1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "io-github-jmg698-font-lab",
+      "displayName": "Font Lab",
+      "description": "A decision surface for typography: curate font directions on your real site, ship next/font code.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.jmg698/font-lab",
+      "version": "0.8.2",
+      "license": "MIT",
+      "repository": "https://github.com/jmg698/Font-Lab",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "font-lab",
+          "version": "0.8.2"
         }
       ]
     },
@@ -136708,6 +138578,29 @@
         {
           "registry": "mcpb",
           "id": "https://github.com/wraelen/framescli/releases/download/v0.1.0/framescli.mcpb"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-france-boamp",
+      "displayName": "France Boamp",
+      "description": "France BOAMP MCP — French government public procurement notices (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/france-boamp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-france-boamp",
+      "homepage": "https://pipeworx.io/packs/france-boamp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/france-boamp/mcp"
         }
       ]
     },
@@ -142594,6 +144487,30 @@
       ]
     },
     {
+      "name": "ai-gemus-gemus",
+      "displayName": "Gemus",
+      "description": "Node-based AI design workflows on the Gemus canvas: generate images, video, 3D, and PPT.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "vision"
+      ],
+      "npm_package": "ai.gemus/gemus",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/Gemus-AI/Gemus",
+      "homepage": "https://gemus.ai",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gemus.ai/api/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-poweredbygen-gen-mcp-server",
       "displayName": "GEN",
       "description": "GEN is an autonomous social media agent: it spots trends, writes scripts, and creates videos.",
@@ -143343,6 +145260,29 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/geodistance/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-geohash",
+      "displayName": "Geohash",
+      "description": "Geohash MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/geohash",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-geohash",
+      "homepage": "https://pipeworx.io/packs/geohash",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/geohash/mcp"
         }
       ]
     },
@@ -144641,6 +146581,29 @@
           "registry": "npm",
           "id": "@ansvar/german-law-mcp",
           "version": "0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-germany-tenders",
+      "displayName": "Germany Tenders",
+      "description": "Germany public procurement MCP — official German government tenders (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/germany-tenders",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-germany-tenders",
+      "homepage": "https://pipeworx.io/packs/germany-tenders",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/germany-tenders/mcp"
         }
       ]
     },
@@ -149243,7 +151206,7 @@
     {
       "name": "io-github-optipub-gmail-postmaster-tools",
       "displayName": "Gmail Postmaster Tools",
-      "description": "Gmail Postmaster Tools v2 — domains, traffic metrics, and compliance via your own Google OAuth.",
+      "description": "Gmail Postmaster Tools v2 ��� domains, traffic metrics, and compliance via your own Google OAuth.",
       "author": "unknown",
       "capabilities": [
         "tool"
@@ -149768,6 +151731,38 @@
       ]
     },
     {
+      "name": "io-github-colinhughes2121-gocreative-wedge-mcp",
+      "displayName": "Gocreative Wedge",
+      "description": "OFAC/PEP sanctions screening, KYB, company & people enrichment tools for AI agents. Free demos.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "vision",
+        "code"
+      ],
+      "npm_package": "io.github.ColinHughes2121/gocreative-wedge-mcp",
+      "version": "1.2.1",
+      "license": "MIT",
+      "repository": "https://github.com/ColinHughes2121/gocreative-mcp",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "gocreative-wedge-mcp",
+          "version": "1.2.1",
+          "env": [
+            {
+              "name": "GOCREATIVE_API_KEY",
+              "required": false,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-godalo-ai-godalo",
       "displayName": "Godalo",
       "description": "Affiliate product search for AI agents. Merchant feeds, not web scraping. Works with any MCP client.",
@@ -149894,6 +151889,41 @@
             {
               "name": "GODOT_PATH",
               "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-diegobr4nd-godot-gut-mcp",
+      "displayName": "Godot Gut",
+      "description": "Servidor MCP que permite ejecutar tests de Godot con GUT desde cualquier IA",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.DiegoBr4nd/godot-gut-mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/DiegoBr4nd/godot-gut-mcp",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "godot-gut-mcp",
+          "version": "0.1.1",
+          "env": [
+            {
+              "name": "GODOT_PATH",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "GODOT_PROJECT_PATH",
+              "required": true,
               "secret": false
             }
           ]
@@ -156513,6 +158543,32 @@
       ]
     },
     {
+      "name": "io-github-dmytrome-groundhog-mcp",
+      "displayName": "Groundhog",
+      "description": "Safe, self-hosted web grounding for AI agents and crawlers over a stealth browser",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.dmytrome/groundhog-mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/dmytrome/groundhog",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "groundhog-mcp",
+          "version": "0.1.1",
+          "runtime": "uvx"
+        }
+      ]
+    },
+    {
       "name": "io-github-rm-rf-prod-groundtruth",
       "displayName": "Groundtruth",
       "description": "Self-hosted MCP for live docs, code audits, and best practices. 363+ libraries, no rate limits.",
@@ -157194,6 +159250,30 @@
           "registry": "npm",
           "id": "@striderlabs/mcp-grubhub",
           "version": "0.1.0"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-gsa-auctions",
+      "displayName": "Gsa Auctions",
+      "description": "GSA Auctions API MCP — US federal government surplus auctions (keyed).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/gsa-auctions",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-gsa-auctions",
+      "homepage": "https://pipeworx.io/packs/gsa-auctions",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/gsa-auctions/mcp"
         }
       ]
     },
@@ -160183,6 +162263,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-hash",
+      "displayName": "Hash",
+      "description": "Cryptographic hash & HMAC MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/hash",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-hash",
+      "homepage": "https://pipeworx.io/packs/hash",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/hash/mcp"
         }
       ]
     },
@@ -166500,6 +168603,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-hongkong-procurement",
+      "displayName": "Hongkong Procurement",
+      "description": "Hong Kong Government Procurement MCP — GLD 'Contracts Awarded' (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/hongkong-procurement",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-hongkong-procurement",
+      "homepage": "https://pipeworx.io/packs/hongkong-procurement",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/hongkong-procurement/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-kimny1143-hoo-mcp",
       "displayName": "Hoo MCP",
       "description": "AI music production assistant — audio profiling, AI mixing sessions, and service inquiries.",
@@ -167915,6 +170041,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-htmlentities",
+      "displayName": "Htmlentities",
+      "description": "HTML entities MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/htmlentities",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-htmlentities",
+      "homepage": "https://pipeworx.io/packs/htmlentities",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/htmlentities/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-varvararatta-htmlpdf-transform-mcp",
       "displayName": "Htmlpdf Transform Mcp",
       "description": "Htmlpdf Transform Mcp connects AI agents to real public APIs via MCP. Tools include",
@@ -167935,6 +170084,29 @@
         {
           "type": "streamable-http",
           "url": "https://htmlpdf-transform-mcp.mcpize.run/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-htmltext",
+      "displayName": "Htmltext",
+      "description": "HTML → text MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/htmltext",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-htmltext",
+      "homepage": "https://pipeworx.io/packs/htmltext",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/htmltext/mcp"
         }
       ]
     },
@@ -168080,6 +170252,30 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/httpcat/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-httpstatus",
+      "displayName": "Httpstatus",
+      "description": "HTTP status code reference MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/httpstatus",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-httpstatus",
+      "homepage": "https://pipeworx.io/packs/httpstatus",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/httpstatus/mcp"
         }
       ]
     },
@@ -169491,6 +171687,29 @@
           "registry": "pypi",
           "id": "huoshui-pdf-translator",
           "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-hurricanes",
+      "displayName": "Hurricanes",
+      "description": "Hurricanes / tropical cyclones MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/hurricanes",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-hurricanes",
+      "homepage": "https://pipeworx.io/packs/hurricanes",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/hurricanes/mcp"
         }
       ]
     },
@@ -173266,6 +175485,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-imei",
+      "displayName": "Imei",
+      "description": "IMEI validation MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/imei",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-imei",
+      "homepage": "https://pipeworx.io/packs/imei",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/imei/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-cyberpapiii-imessage-max",
       "displayName": "Imessage Max",
       "description": "AI-optimized MCP server for iMessage on macOS. Read, search, and send messages.",
@@ -173580,6 +175822,28 @@
         {
           "type": "streamable-http",
           "url": "https://immigration-travel-mcp.apify.actor/mcp"
+        }
+      ]
+    },
+    {
+      "name": "com-biaedge-immigration-research",
+      "displayName": "Immigration Research",
+      "description": "U.S. immigration law research: BIA/AAO/circuit cases, INA/CFR, USCIS policy, crimmigration.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search"
+      ],
+      "npm_package": "com.biaedge/immigration-research",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://biaedge.com",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://biaedge-mcp.onrender.com/mcp"
         }
       ]
     },
@@ -176319,6 +178583,28 @@
       ]
     },
     {
+      "name": "ai-insideralpha-insider-alpha",
+      "displayName": "InsiderAlpha — SEC Insider Trading",
+      "description": "SEC Form 4 insider trades, daily trading plans, 8-K catalysts and market data for AI assistants.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "ai.insideralpha/insider-alpha",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://insideralpha.ai/docs/mcp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.insideralpha.ai/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-rezmeplxrf-insightsentry-mcp",
       "displayName": "Insightsentry Mcp",
       "description": "MCP server for InsightSentry financial data API - market data, options, screeners, and more",
@@ -178810,6 +181096,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-ipaddress",
+      "displayName": "Ipaddress",
+      "description": "IP address utilities MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/ipaddress",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-ipaddress",
+      "homepage": "https://pipeworx.io/packs/ipaddress",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/ipaddress/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-ipayx-stellar-fx-audit",
       "displayName": "IPayX FX Audit",
       "description": "Forensic FX audit. Detects hidden bank markups in real time. Returns spread bps + audit score 1-10.",
@@ -179966,6 +182275,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-israel-tenders",
+      "displayName": "Israel Tenders",
+      "description": "Israel Government Procurement MCP — public tenders & exemption contracts (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/israel-tenders",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-israel-tenders",
+      "homepage": "https://pipeworx.io/packs/israel-tenders",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/israel-tenders/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-pipeworx-io-iss-number",
       "displayName": "Iss Number",
       "description": "iss-number MCP — wraps StupidAPIs (requires X-API-Key)",
@@ -180009,6 +182341,30 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/istat-it/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-matematicsolutions-it-eli-mcp",
+      "displayName": "It Eli",
+      "description": "Italian law: Normattiva legislation (ELI) and Corte Costituzionale case law (ECLI).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.matematicsolutions/it-eli-mcp",
+      "version": "0.2.2",
+      "license": "MIT",
+      "repository": "https://github.com/matematicsolutions/it-eli-mcp",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "italy-eli-mcp",
+          "version": "0.2.2",
+          "runtime": "uvx"
         }
       ]
     },
@@ -181190,7 +183546,7 @@
     {
       "name": "io-github-izyuusya-japan-data-mcp",
       "displayName": "Japan Data",
-      "description": "日本の公的データ（��計��法人・不動産）にAIからアクセスするMCPサーバー。e-Stat統計API・法人番号Web-API・不動産情報ライブラリAPIの3API統合。全国約1,700市区町村対応。",
+      "description": "日本の公的データ（統計・法人・不動産）にAIからアクセスするMCPサーバー。e-Stat統計API・法人番号Web-API・不動産情報ライブラリAPIの3API統合。全国約1,700市区町村対応。",
       "author": "unknown",
       "capabilities": [
         "resource"
@@ -181227,6 +183583,27 @@
               "secret": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "dev-toriigate-food-db",
+      "displayName": "Japan Food DB",
+      "description": "Resolve Japanese food names to nutrition facts. All 2,538 foods from Japan's official tables.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "dev.toriigate/food-db",
+      "version": "0.2.0",
+      "license": "MIT",
+      "repository": "https://github.com/yuki00yossi/toriigate-platform",
+      "homepage": "https://toriigate.dev",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://toriigate.dev/mcp/food-db"
         }
       ]
     },
@@ -183781,6 +186158,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-json",
+      "displayName": "Json",
+      "description": "JSON tools MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/json",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-json",
+      "homepage": "https://pipeworx.io/packs/json",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/json/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-rog0x-json",
       "displayName": "Json",
       "description": "JSON/YAML/CSV validate, diff, transform for AI agents",
@@ -184066,6 +186466,29 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/jsonplaceholder/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-jsonschema",
+      "displayName": "Jsonschema",
+      "description": "JSON Schema validation MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/jsonschema",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-jsonschema",
+      "homepage": "https://pipeworx.io/packs/jsonschema",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/jsonschema/mcp"
         }
       ]
     },
@@ -184863,6 +187286,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-jwt",
+      "displayName": "Jwt",
+      "description": "JWT decoder MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/jwt",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-jwt",
+      "homepage": "https://pipeworx.io/packs/jwt",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/jwt/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-ryudi84-jwt",
       "displayName": "Jwt",
       "description": "MCP server for JWT decoding and inspection",
@@ -185311,6 +187757,39 @@
             {
               "name": "KADAM_PUB_API_KEY",
               "required": false,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-jors7-kadenzo-mcp",
+      "displayName": "Kadenzo",
+      "description": "Schedule, manage, generate & analyze social posts across 11 networks from any AI agent.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "network",
+        "social",
+        "code"
+      ],
+      "npm_package": "io.github.jors7/kadenzo-mcp",
+      "version": "1.3.1",
+      "license": "MIT",
+      "repository": "https://github.com/jors7/kadenzo-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "kadenzo-mcp",
+          "version": "1.3.1",
+          "env": [
+            {
+              "name": "KADENZO_API_KEY",
+              "required": true,
               "secret": true
             }
           ]
@@ -187291,6 +189770,31 @@
         {
           "type": "streamable-http",
           "url": "https://kernelscan.io/mcp/"
+        }
+      ]
+    },
+    {
+      "name": "io-github-tang-vu-keryx",
+      "displayName": "Keryx",
+      "description": "Autonomous research agent that pays every source it cites in USDC on Arc via x402 micropayments.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.tang-vu/keryx",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/tang-vu/keryx",
+      "homepage": "https://keryx.cc",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "keryx-mcp",
+          "version": "0.1.1"
         }
       ]
     },
@@ -191026,6 +193530,28 @@
       ]
     },
     {
+      "name": "space-mysoma-kpn",
+      "displayName": "KPN Persona Runtime",
+      "description": "Verify a persona's DID-signed identity and query value-based judgment — advisory only, no actions.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search"
+      ],
+      "npm_package": "space.mysoma/kpn",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://kpn.mysoma.space",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://persona-mcp-server.onrender.com/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-bakyang2-kr-crypto-intelligence",
       "displayName": "Kr Crypto Intelligence",
       "description": "Korean crypto market data: Kimchi Premium, stablecoin premium, Upbit/Bithumb prices, FX rate.",
@@ -191849,6 +194375,29 @@
         {
           "type": "sse",
           "url": "https://kultur.dev/api/mcp-sse/sse"
+        }
+      ]
+    },
+    {
+      "name": "com-kurdishtts-kurdish-tts-stt",
+      "displayName": "Kurdish Tts Stt",
+      "description": "Kurdish (Sorani & Kurmanji) text-to-speech & speech-to-text — 664 AI voices. API key required.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "ai"
+      ],
+      "npm_package": "com.kurdishtts/kurdish-tts-stt",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://www.kurdishtts.com/docs/api",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://www.kurdishtts.com/api/mcp"
         }
       ]
     },
@@ -194574,6 +197123,28 @@
       ]
     },
     {
+      "name": "app-learnwithagents-learn-with-agents",
+      "displayName": "Learn With Agents",
+      "description": "Your AI agent builds interactive block-based courses over MCP; take them at learnwithagents.app.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "app.learnwithagents/learn-with-agents",
+      "version": "0.1.0",
+      "license": "MIT",
+      "homepage": "https://learnwithagents.app",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://learnwithagents.app/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-yarnabrina-mcp-learning",
       "displayName": "Learning",
       "description": "MCP server that can perform basic arithmetic operations and parse/evaluate arithmetic expressions.",
@@ -196006,6 +198577,45 @@
       ]
     },
     {
+      "name": "io-github-lex-api-lexapi-mcp",
+      "displayName": "LexAPI",
+      "description": "Search EUR-Lex, fetch parsed EU legislation and case law, explore the citation graph.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "search",
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.Lex-API/lexapi-mcp",
+      "version": "0.1.3",
+      "license": "MIT",
+      "repository": "https://github.com/Lex-API/lexapi-mcp",
+      "homepage": "https://lex-api.com",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@lexapi/mcp",
+          "version": "0.1.3",
+          "runtime": "npx",
+          "env": [
+            {
+              "name": "LEXAPI_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "LEXAPI_BASE_URL",
+              "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-evozim-lexguard",
       "displayName": "LexGuard",
       "description": "Contract clause parser assessing corporate legal risk exposure.",
@@ -197186,6 +199796,29 @@
           "registry": "npm",
           "id": "license-verify-mcp",
           "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-licenses",
+      "displayName": "Licenses",
+      "description": "Open-source licenses MCP (SPDX).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/licenses",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-licenses",
+      "homepage": "https://pipeworx.io/packs/licenses",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/licenses/mcp"
         }
       ]
     },
@@ -201104,6 +203737,30 @@
       "version": "1.1.1",
       "license": "MIT",
       "repository": "https://github.com/zero-abd/llmmcp"
+    },
+    {
+      "name": "org-llmref-llmref",
+      "displayName": "Llmref",
+      "description": "Versioned documentation registry and semantic search for AI tools and coding assistants.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "ai"
+      ],
+      "npm_package": "org.llmref/llmref",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/reclear-io/llmref-plugin",
+      "homepage": "https://llmref.org",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://api.llmref.org/v1/mcp"
+        }
+      ]
     },
     {
       "name": "io-github-tjacquesson-llmtest-mcp",
@@ -206309,6 +208966,49 @@
       ]
     },
     {
+      "name": "com-mailbuttons-mcp-server",
+      "displayName": "Mailbuttons",
+      "description": "Governed email for AI agents: sandbox inboxes, server-side policy gate, tamper-evident audit.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "com.mailbuttons/mcp-server",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/mailbuttons/mailbuttons",
+      "homepage": "https://mailbuttons.com",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@mailbuttons/mcp-server",
+          "version": "0.1.0",
+          "runtime": "npx",
+          "env": [
+            {
+              "name": "MAILBUTTONS_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "MAILBUTTONS_API_URL",
+              "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mailbuttons.com/api/v1/mcp/rpc"
+        }
+      ]
+    },
+    {
       "name": "io-github-asklokesh-mailchimp-mcp-server",
       "displayName": "Mailchimp",
       "description": "MCP server for Mailchimp API integration",
@@ -208516,6 +211216,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-markdown",
+      "displayName": "Markdown",
+      "description": "Markdown utilities MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/markdown",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-markdown",
+      "homepage": "https://pipeworx.io/packs/markdown",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/markdown/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-rog0x-markdown",
       "displayName": "Markdown",
       "description": "Markdown TOC, lint, format, stats for AI agents",
@@ -209095,6 +211818,30 @@
         {
           "type": "streamable-http",
           "url": "https://marketing-mcp.mcpize.run/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-sandeepkelvadi-marketing-skills-directory",
+      "displayName": "Marketing Skills Directory",
+      "description": "Search, browse & read 340+ Claude Code marketing & SEO skills from any MCP client.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.sandeepkelvadi/marketing-skills-directory",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/sandeepkelvadi/mkt-skills-dir",
+      "homepage": "https://marketingskills.directory/",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://marketingskills.directory/wp-json/mkt/v1/mcp"
         }
       ]
     },
@@ -210601,6 +213348,32 @@
       ]
     },
     {
+      "name": "io-github-maxaeo-maxaeo-ai-visibility-mcp",
+      "displayName": "MaxAEO AI Visibility MCP",
+      "description": "Local-first MCP server for AI visibility, GEO/AEO, llms.txt, and AI crawler readiness audits.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.maxaeo/maxaeo-ai-visibility-mcp",
+      "version": "0.3.2",
+      "license": "MIT",
+      "repository": "https://github.com/maxaeo/maxaeo-ai-visibility-mcp",
+      "homepage": "https://github.com/maxaeo/maxaeo-ai-visibility-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "maxaeo-ai-visibility-mcp",
+          "version": "0.3.2",
+          "runtime": "npx"
+        }
+      ]
+    },
+    {
       "name": "ai-maxcv-resume",
       "displayName": "Maxcv — CV Tailoring",
       "description": "Score and tailor your CV/resume against a job posting — for AI agents and humans, no-login trial.",
@@ -210808,6 +213581,46 @@
       "license": "MIT",
       "repository": "https://github.com/joelklabo/maximumsats-mcp",
       "homepage": "https://maximumsats.com"
+    },
+    {
+      "name": "io-github-servosity-maxio-mcp",
+      "displayName": "Maxio MCP",
+      "description": "Open, local revenue-intelligence CLI for Maxio Advanced Billing  -  MRR waterfalls",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.Servosity/maxio-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/servosity/msp-skills",
+      "packages": [
+        {
+          "registry": "mcpb",
+          "id": "https://github.com/Servosity/msp-skills/releases/download/maxio-v0.1.0/maxio-mcp.mcpb",
+          "version": "0.1.0",
+          "env": [
+            {
+              "name": "MAXIO_PASSWORD",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "MAXIO_SITE",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "MAXIO_USERNAME",
+              "required": true,
+              "secret": true
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "ai-smithery-mayla-debug-mcp-google-calendar2",
@@ -211180,6 +213993,44 @@
         {
           "type": "streamable-http",
           "url": "https://api.fathom.ai/mcp"
+        }
+      ]
+    },
+    {
+      "name": "ai-foura-mcp",
+      "displayName": "Mcp",
+      "description": "Web scraping for AI agents: fetch any page via proxy or full browser, past anti-bot defenses.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "ai"
+      ],
+      "npm_package": "ai.foura/mcp",
+      "version": "0.4.1",
+      "license": "MIT",
+      "repository": "https://github.com/fouradata/mcp",
+      "homepage": "https://foura.ai/mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@fouradata/mcp",
+          "version": "0.4.1",
+          "env": [
+            {
+              "name": "FOURA_API_KEY",
+              "required": true,
+              "secret": true
+            }
+          ]
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.foura.ai/mcp"
         }
       ]
     },
@@ -212385,6 +215236,41 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.eztexting.com/mcp/admin"
+        }
+      ]
+    },
+    {
+      "name": "com-fidacy-mcp",
+      "displayName": "Mcp",
+      "description": "Payment firewall for AI agents: a signed, verifiable verdict on every money-moving action.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "com.fidacy/mcp",
+      "version": "0.1.9",
+      "license": "MIT",
+      "repository": "https://github.com/lucaslubi/fidacy-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@fidacy/mcp",
+          "version": "0.1.9",
+          "env": [
+            {
+              "name": "FIDACY_ENGINE_API_KEY",
+              "required": false,
+              "secret": true
+            },
+            {
+              "name": "FIDACY_MODE",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -215166,6 +218052,32 @@
       ]
     },
     {
+      "name": "io-github-apolloio-mcp",
+      "displayName": "Mcp",
+      "description": "Official Apollo.io MCP server for lead enrichment, prospecting, sequences, and analytics.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "analytics",
+        "code"
+      ],
+      "npm_package": "io.github.apolloio/mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/apolloio/apollo-mcp-plugin",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@apolloio/mcp",
+          "version": "0.1.1",
+          "transport": "streamable-http",
+          "url": "https://mcp.apollo.io/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-ar-agents-mcp",
       "displayName": "Mcp",
       "description": "Argentine business automation: Mercado Pago, AFIP/ARCA, WhatsApp, banking, shipping (7 packages).",
@@ -216508,6 +219420,43 @@
       ]
     },
     {
+      "name": "io-github-truetick-gg-mcp",
+      "displayName": "Mcp",
+      "description": "Manage TrueTick Minecraft servers from AI: start/stop, live TPS, console, files, backups, mods.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "file",
+        "code"
+      ],
+      "npm_package": "io.github.truetick-gg/mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/truetick-gg/mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@truetick/mcp",
+          "version": "0.1.1",
+          "env": [
+            {
+              "name": "TRUETICK_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "TRUETICK_API_URL",
+              "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-trypeach-io-mcp",
       "displayName": "Mcp",
       "description": "Send and manage WhatsApp messages, contacts, templates, and events via Peach AI.",
@@ -217435,6 +220384,29 @@
         {
           "type": "streamable-http",
           "url": "https://www.apier.no/api/mcp"
+        }
+      ]
+    },
+    {
+      "name": "one-everstake-mcp",
+      "displayName": "Mcp",
+      "description": "MCP server connecting AI agents to non-custodial staking data across 130+ networks.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "network"
+      ],
+      "npm_package": "one.everstake/mcp",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/everstake/mcp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.everstake.one"
         }
       ]
     },
@@ -222781,6 +225753,29 @@
         {
           "type": "streamable-http",
           "url": "https://www.medibillsaver.com/api/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-medical-codes",
+      "displayName": "Medical Codes",
+      "description": "Medical codes MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/medical-codes",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-medical-codes",
+      "homepage": "https://pipeworx.io/packs/medical-codes",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/medical-codes/mcp"
         }
       ]
     },
@@ -230628,6 +233623,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-mime",
+      "displayName": "Mime",
+      "description": "MIME type lookup MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/mime",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-mime",
+      "homepage": "https://pipeworx.io/packs/mime",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/mime/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-wyre-technology-mimecast-mcp",
       "displayName": "Mimecast",
       "description": "MCP server for Mimecast email security: message queue, held messages, domains, and threats.",
@@ -230812,34 +233830,6 @@
       "license": "MIT",
       "repository": "https://github.com/tcconnally/mimir",
       "homepage": "https://perseus.observer"
-    },
-    {
-      "name": "io-github-perseus-computing-llc-mimir",
-      "displayName": "Mimir, Persistent Memory Engine For AI Agents",
-      "description": "Local-first MCP memory server: SQLite, FTS5 and vector search, AES-256-GCM. 43 tools, no cloud.",
-      "author": "unknown",
-      "capabilities": [
-        "tool"
-      ],
-      "tags": [
-        "database",
-        "search",
-        "cloud",
-        "memory",
-        "code"
-      ],
-      "npm_package": "io.github.Perseus-Computing-LLC/mimir",
-      "version": "2.7.0",
-      "license": "MIT",
-      "repository": "https://github.com/Perseus-Computing-LLC/mimir",
-      "homepage": "https://github.com/Perseus-Computing-LLC/mimir",
-      "packages": [
-        {
-          "registry": "oci",
-          "id": "ghcr.io/perseus-computing-llc/mimir:2.7.0",
-          "runtime": "docker"
-        }
-      ]
     },
     {
       "name": "io-github-minaprotocol-mina-mcp-server",
@@ -231912,6 +234902,29 @@
           "registry": "pypi",
           "id": "misata",
           "version": "0.8.0.post1"
+        }
+      ]
+    },
+    {
+      "name": "io-github-melanieabc-misim-tax-research",
+      "displayName": "Misim Tax Research",
+      "description": "Israeli tax research: source-grounded answers with official citations, in Hebrew.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.MelanieABC/misim-tax-research",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/MelanieABC/misim-tax-research",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://misim.ai/api/misim/mcp"
         }
       ]
     },
@@ -233264,6 +236277,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-mockdata",
+      "displayName": "Mockdata",
+      "description": "Mock data generator MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/mockdata",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-mockdata",
+      "homepage": "https://pipeworx.io/packs/mockdata",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/mockdata/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-dinosaur24-mockhero",
       "displayName": "Mockhero",
       "description": "Generate realistic relational test data. 156 field types, 22 locales, JSON/CSV/SQL.",
@@ -233900,6 +236936,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-moldova-tenders",
+      "displayName": "Moldova Tenders",
+      "description": "Moldova Government Procurement (MTender) MCP — keyless.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/moldova-tenders",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-moldova-tenders",
+      "homepage": "https://pipeworx.io/packs/moldova-tenders",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/moldova-tenders/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-kobzevvv-moldsim-mcp",
       "displayName": "MoldSim MCP Server",
       "description": "Injection molding simulation expertise — materials, process validation, and DFM checks",
@@ -234359,14 +237418,14 @@
       ],
       "tags": [],
       "npm_package": "com.pulsemcp/monarch-money",
-      "version": "0.0.7",
+      "version": "0.0.11",
       "license": "MIT",
       "repository": "https://github.com/pulsemcp/mcp-servers",
       "packages": [
         {
           "registry": "npm",
           "id": "monarch-money-mcp-server",
-          "version": "0.0.7",
+          "version": "0.0.11",
           "runtime": "npx",
           "env": [
             {
@@ -236041,6 +239100,28 @@
       ]
     },
     {
+      "name": "design-mozaika-mozaika",
+      "displayName": "Mozaika",
+      "description": "Design references for coding agents: real product screens, sections and decoded design tokens.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "design.mozaika/mozaika",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://mozaika.design",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mozaika.design/mcp"
+        }
+      ]
+    },
+    {
       "name": "eu-ansvar-mozambican-law-mcp",
       "displayName": "Mozambican Law",
       "description": "Mozambique legislation via MCP -- full-text search across statutes and provisions",
@@ -236673,6 +239754,29 @@
       ]
     },
     {
+      "name": "io-github-hermessilva-mssql-localdb-mcp",
+      "displayName": "MSSQL LocalDB MCP",
+      "description": "MCP server for SQL Server Express LocalDB on Windows: manage instances, run T-SQL, discover DBs",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "database",
+        "code"
+      ],
+      "npm_package": "io.github.hermessilva/mssql-localdb-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/hermessilva/LocalDB-MCP",
+      "packages": [
+        {
+          "registry": "mcpb",
+          "id": "https://github.com/hermessilva/LocalDB-MCP/releases/download/v0.1.0/mssql-localdb-mcp-0.1.0-win64.mcpb"
+        }
+      ]
+    },
+    {
       "name": "io-github-connorbritain-mssql-reader",
       "displayName": "Mssql Reader",
       "description": "Read-only MCP server for Microsoft SQL Server — schema discovery, profiling, safe querying",
@@ -236720,6 +239824,30 @@
           "id": "@connorbritain/mssql-mcp-writer",
           "version": "0.3.1",
           "runtime": "node"
+        }
+      ]
+    },
+    {
+      "name": "io-github-matematicsolutions-mt-eli-mcp",
+      "displayName": "Mt Eli",
+      "description": "MCP server for Maltese legislation (legislation.mt) with ELI and verifiable citations.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.matematicsolutions/mt-eli-mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/matematicsolutions/mt-eli-mcp",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "mt-eli-mcp",
+          "version": "0.1.1",
+          "runtime": "uvx"
         }
       ]
     },
@@ -239257,6 +242385,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-myhealthfinder",
+      "displayName": "Myhealthfinder",
+      "description": "MyHealthfinder MCP — U.S. preventive-services & health-screening guidance",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/myhealthfinder",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-myhealthfinder",
+      "homepage": "https://pipeworx.io/packs/myhealthfinder",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/myhealthfinder/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-austenstone-myinstants",
       "displayName": "Myinstants",
       "description": "Give your AI agent a soundboard. Millions of meme sounds from myinstants.com.",
@@ -241725,6 +244877,29 @@
         {
           "type": "streamable-http",
           "url": "https://urlcheck.ai/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-nato",
+      "displayName": "Nato",
+      "description": "Phonetic & Morse code MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/nato",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-nato",
+      "homepage": "https://pipeworx.io/packs/nato",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/nato/mcp"
         }
       ]
     },
@@ -244251,14 +247426,14 @@
         "code"
       ],
       "npm_package": "io.github.AdelElo13/neuromcp",
-      "version": "0.4.2",
+      "version": "0.26.0",
       "license": "MIT",
       "repository": "https://github.com/AdelElo13/neuromcp",
       "packages": [
         {
           "registry": "npm",
           "id": "neuromcp",
-          "version": "0.4.2",
+          "version": "0.26.0",
           "runtime": "npx"
         }
       ]
@@ -252057,6 +255232,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-numbers",
+      "displayName": "Numbers",
+      "description": "Number utilities MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/numbers",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-numbers",
+      "homepage": "https://pipeworx.io/packs/numbers",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/numbers/mcp"
+        }
+      ]
+    },
+    {
       "name": "online-numbers-numbers-online",
       "displayName": "Numbers Online — Phone Intelligence",
       "description": "Read-only phone intelligence for AI voice agents — line type, risk, DNC, signed receipts.",
@@ -253413,6 +256611,51 @@
               "secret": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "com-get-obra-obra-cfo",
+      "displayName": "Obra Cfo",
+      "description": "Local-first MCP that runs an investment committee on your pitch and scores funding readiness.",
+      "author": "unknown",
+      "capabilities": [
+        "tool",
+        "resource"
+      ],
+      "tags": [],
+      "npm_package": "com.get-obra/obra-cfo",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/lilycip/obra-cfo",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "obra-cfo",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "com-get-obra-obra-cto",
+      "displayName": "Obra Cto",
+      "description": "Local-first MCP that scores your codebase's build readiness. Your code never leaves your machine.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "com.get-obra/obra-cto",
+      "version": "0.2.1",
+      "license": "MIT",
+      "repository": "https://github.com/lilycip/obra-cto",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "obra-cto",
+          "version": "0.2.1"
         }
       ]
     },
@@ -255749,6 +258992,26 @@
       ]
     },
     {
+      "name": "com-okdocai-okdoc",
+      "displayName": "Okdoc",
+      "description": "E-signature & document automation: create, send, track and sign documents with payments. 38 tools.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "com.okdocai/okdoc",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://okdocai.com/ai",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://okdocai.com/api/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-neturely-okffs",
       "displayName": "Okffs",
       "description": "MCP server connecting Claude Code to GitHub for an issue to branch to PR to close workflow.",
@@ -256761,6 +260024,37 @@
       ]
     },
     {
+      "name": "io-github-aitools420-onchain-safety-mcp",
+      "displayName": "Onchain Safety",
+      "description": "Token-safety for AI agents: rug/honeypot verdict + score across PulseChain, Monad, Base & BSC",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.aitools420/onchain-safety-mcp",
+      "version": "0.2.0",
+      "license": "MIT",
+      "repository": "https://github.com/aitools420/onchain-safety-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@wickpics/onchain-safety-mcp",
+          "version": "0.2.0",
+          "env": [
+            {
+              "name": "ONCHAIN_API_KEY",
+              "required": false,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "com-onchaindiligence-compliance",
       "displayName": "OnchainDiligence",
       "description": "Pay-per-call sanctions screening and UK company checks for agents, paid in USDC via x402.",
@@ -257103,6 +260397,32 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-astuto-ai-onelens-mcp",
+      "displayName": "Onelens",
+      "description": "Query OneLens cloud-cost data in natural language: breakdowns, trends, cost centers. Read-only.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "search",
+        "ai",
+        "cloud",
+        "code"
+      ],
+      "npm_package": "io.github.astuto-ai/onelens-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/astuto-ai/mcp",
+      "homepage": "https://astuto.ai",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.onelens.cloud/mcp"
         }
       ]
     },
@@ -262189,14 +265509,14 @@
         "code"
       ],
       "npm_package": "io.github.openpouch/openpouch",
-      "version": "0.2.9",
+      "version": "0.2.10",
       "license": "MIT",
       "repository": "https://github.com/openpouch/openpouch",
       "packages": [
         {
           "registry": "npm",
           "id": "@openpouch/mcp",
-          "version": "0.2.9"
+          "version": "0.2.10"
         }
       ]
     },
@@ -266473,6 +269793,29 @@
       ]
     },
     {
+      "name": "io-github-industrial-aiops-iaiops-energy",
+      "displayName": "OT AIops — Energy Edition",
+      "description": "Industrial-AIOps energy edition: IEC-104/DNP3/IEC-61850 read-only OT connectors on iaiops.core.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.industrial-aiops/iaiops-energy",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/industrial-aiops/industrial-aiops-energy",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "iaiops-energy",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
       "name": "io-github-ansvar-systems-ot-security-mcp",
       "displayName": "Ot Security",
       "description": "OT security standards: IEC 62443, NIST 800-82/53, MITRE ATT&CK for ICS",
@@ -266804,6 +270147,67 @@
               "name": "OURA_CLIENT_SECRET",
               "required": false,
               "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-jordanburke-oura-ring-mcp-server",
+      "displayName": "Oura Ring Mcp Server",
+      "description": "Oura Ring MCP server for the Oura API v2: sleep, readiness, activity, heart rate, and more.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.jordanburke/oura-ring-mcp-server",
+      "version": "0.1.2",
+      "license": "MIT",
+      "repository": "https://github.com/jordanburke/oura-ring-mcp-server",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "oura-ring-mcp-server",
+          "version": "0.1.2",
+          "env": [
+            {
+              "name": "OURA_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "OURA_SANDBOX",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "TRANSPORT_TYPE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "PORT",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "HOST",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OURA_TELEMETRY_FILE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "OURA_TELEMETRY_CONSOLE",
+              "required": false,
+              "secret": false
             }
           ]
         }
@@ -270673,6 +274077,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-paraguay-dncp",
+      "displayName": "Paraguay Dncp",
+      "description": "Paraguay DNCP MCP — Paraguay government procurement / public contracts (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/paraguay-dncp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-paraguay-dncp",
+      "homepage": "https://pipeworx.io/packs/paraguay-dncp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/paraguay-dncp/mcp"
+        }
+      ]
+    },
+    {
       "name": "eu-ansvar-paraguayan-law-mcp",
       "displayName": "Paraguayan Law",
       "description": "Paraguay legislation via MCP -- full-text search across statutes and provisions",
@@ -272136,6 +275563,29 @@
         {
           "type": "sse",
           "url": "https://password-strength-x402-production.up.railway.app/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-passwordgen",
+      "displayName": "Passwordgen",
+      "description": "Secure password generator MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/passwordgen",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-passwordgen",
+      "homepage": "https://pipeworx.io/packs/passwordgen",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/passwordgen/mcp"
         }
       ]
     },
@@ -274875,6 +278325,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-peopledatalabs",
+      "displayName": "Peopledatalabs",
+      "description": "People Data Labs MCP — wraps the PDL person/company enrichment API",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/peopledatalabs",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-peopledatalabs",
+      "homepage": "https://pipeworx.io/packs/peopledatalabs",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/peopledatalabs/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-pepesto-solutions-pepesto-mcp",
       "displayName": "Pepesto",
       "description": "MCP server for the Pepesto grocery shopping API — recipe-to-cart across European supermarkets.",
@@ -275119,6 +278593,36 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.perception.to/mcp"
+        }
+      ]
+    },
+    {
+      "name": "app-percher-percher",
+      "displayName": "Percher",
+      "description": "MCP-native hosting: publish and operate AI-built web apps live at name.percher.run.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "ai"
+      ],
+      "npm_package": "app.percher/percher",
+      "version": "0.6.15",
+      "license": "MIT",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@percher/mcp",
+          "version": "0.6.15",
+          "runtime": "npx"
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.percher.app/mcp"
         }
       ]
     },
@@ -275640,6 +279144,34 @@
           "registry": "pypi",
           "id": "perseus-ctx",
           "version": "1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "io-github-perseus-computing-llc-mimir",
+      "displayName": "Perseus Vault (formerly Mimir/Mneme), Persistent Memory Engine For AI Agents",
+      "description": "Local-first MCP memory server: SQLite, FTS5 and vector search, AES-256-GCM. 49 tools, no cloud.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "database",
+        "search",
+        "cloud",
+        "memory",
+        "code"
+      ],
+      "npm_package": "io.github.Perseus-Computing-LLC/mimir",
+      "version": "2.13.0",
+      "license": "MIT",
+      "repository": "https://github.com/Perseus-Computing-LLC/perseus-vault",
+      "homepage": "https://github.com/Perseus-Computing-LLC/perseus-vault",
+      "packages": [
+        {
+          "registry": "oci",
+          "id": "ghcr.io/perseus-computing-llc/perseus-vault:2.13.0",
+          "runtime": "docker"
         }
       ]
     },
@@ -276421,6 +279953,36 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.pga.com/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-powergridiq-pgiq-mcp",
+      "displayName": "Pgiq",
+      "description": "PGIQ Rating as agent tools for siting large electricity loads across 67 power markets.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.powergridiq/pgiq-mcp",
+      "version": "1.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/powergridiq/pgiq-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "pgiq-mcp",
+          "version": "1.1.0",
+          "env": [
+            {
+              "name": "PGIQ_KEY",
+              "required": false,
+              "secret": true
+            }
+          ]
         }
       ]
     },
@@ -277837,6 +281399,26 @@
       ]
     },
     {
+      "name": "net-pifini-pifini",
+      "displayName": "Pifini",
+      "description": "Real events, reviewed places, and ticket checkout across the Caribbean and Latin America.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "net.pifini/pifini",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://pifini.net/agents",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://pifini.net/api/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-aplaceforallmystuff-mcp-pihole",
       "displayName": "Pihole",
       "description": "Pi-hole v6 MCP server - manage DNS blocking, stats, whitelists/blacklists",
@@ -278951,7 +282533,7 @@
     {
       "name": "io-github-aitor-alt-pixel-squads",
       "displayName": "Pixel Squads",
-      "description": "MCP Server for Pixel Squads �� observe your AI agents as pixel-art characters in a live office",
+      "description": "MCP Server for Pixel Squads — observe your AI agents as pixel-art characters in a live office",
       "author": "unknown",
       "capabilities": [
         "tool"
@@ -280909,6 +284491,31 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-plur-ai-plur",
+      "displayName": "Plur",
+      "description": "Open, local-first engram memory for AI agents: read, correct, delete; shared over MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "memory",
+        "code"
+      ],
+      "npm_package": "io.github.plur-ai/plur",
+      "version": "0.10.1",
+      "license": "MIT",
+      "repository": "https://github.com/plur-ai/plur",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@plur-ai/mcp",
+          "version": "0.10.1"
         }
       ]
     },
@@ -284296,14 +287903,14 @@
         "web"
       ],
       "npm_package": "com.postman/postman-mcp-server",
-      "version": "2.4.2",
+      "version": "2.11.0",
       "license": "MIT",
       "repository": "https://github.com/postmanlabs/postman-mcp-server",
       "packages": [
         {
           "registry": "npm",
           "id": "@postman/postman-mcp-server",
-          "version": "2.4.2",
+          "version": "2.11.0",
           "env": [
             {
               "name": "POSTMAN_API_KEY",
@@ -284314,7 +287921,7 @@
         },
         {
           "registry": "mcpb",
-          "id": "https://github.com/postmanlabs/postman-mcp-server/releases/download/v2.3.7/postman-mcp-server-minimal.mcpb",
+          "id": "https://github.com/postmanlabs/postman-mcp-server/releases/download/v2.11.0/postman-mcp-server-minimal.mcpb",
           "env": [
             {
               "name": "POSTMAN_API_KEY",
@@ -284325,7 +287932,18 @@
         },
         {
           "registry": "mcpb",
-          "id": "https://github.com/postmanlabs/postman-mcp-server/releases/download/v2.3.7/postman-mcp-server-full.mcpb",
+          "id": "https://github.com/postmanlabs/postman-mcp-server/releases/download/v2.11.0/postman-mcp-server-full.mcpb",
+          "env": [
+            {
+              "name": "POSTMAN_API_KEY",
+              "required": true,
+              "secret": true
+            }
+          ]
+        },
+        {
+          "registry": "mcpb",
+          "id": "https://github.com/postmanlabs/postman-mcp-server/releases/download/v2.11.0/postman-mcp-server-code.mcpb",
           "env": [
             {
               "name": "POSTMAN_API_KEY",
@@ -287173,7 +290791,7 @@
     {
       "name": "io-github-prodpoke-prodpoke-mcp",
       "displayName": "ProdPoke",
-      "description": "AI QA tester �� real browsers scan sites for bugs, SEO, perf, and accessibility issues via chat.",
+      "description": "AI QA tester — real browsers scan sites for bugs, SEO, perf, and accessibility issues via chat.",
       "author": "unknown",
       "capabilities": [
         "tool"
@@ -290117,6 +293735,52 @@
       ]
     },
     {
+      "name": "io-github-ntrpydev-proton-workflow-connector",
+      "displayName": "Proton Workflow Connector",
+      "description": "Unofficial self-hosted MCP connector for Proton Mail Bridge and SimpleLogin.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.NtrpyDev/proton-workflow-connector",
+      "version": "1.3.0",
+      "license": "MIT",
+      "repository": "https://github.com/NtrpyDev/proton-workflow-connector",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "proton-workflow-connector",
+          "version": "1.3.0",
+          "runtime": "uvx",
+          "env": [
+            {
+              "name": "PROTON_BRIDGE_USERNAME",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "PROTON_BRIDGE_PASSWORD",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "PROTON_BRIDGE_EMAIL",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "SIMPLELOGIN_API_KEY",
+              "required": false,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-provartesting-provar",
       "displayName": "Provar MCP Server",
       "description": "Provar MCP: AI-powered Salesforce test automation. Generate, validate, migrate, and run tests.",
@@ -290806,6 +294470,29 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.proxygate.ai/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-prozorro",
+      "displayName": "Prozorro",
+      "description": "ProZorro MCP — Ukraine government procurement (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/prozorro",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-prozorro",
+      "homepage": "https://pipeworx.io/packs/prozorro",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/prozorro/mcp"
         }
       ]
     },
@@ -292314,6 +296001,29 @@
               "secret": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-pulsedive",
+      "displayName": "Pulsedive",
+      "description": "Pulsedive MCP — threat-intelligence IOC enrichment (pulsedive.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/pulsedive",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-pulsedive",
+      "homepage": "https://pipeworx.io/packs/pulsedive",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/pulsedive/mcp"
         }
       ]
     },
@@ -295656,6 +299366,24 @@
       ]
     },
     {
+      "name": "io-github-mgm-falcon-quelllm-mcp",
+      "displayName": "Quelllm",
+      "description": "MCP server for quelllm.fr: 190+ open-weights LLM catalog - list, compare, VRAM and cost estimates",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.MGM-FALCON/quelllm-mcp",
+      "version": "1.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/MGM-FALCON/quelllm-mcp",
+      "homepage": "https://quelllm.fr"
+    },
+    {
       "name": "io-github-evozim-query-forge",
       "displayName": "Query Forge",
       "description": "Enterprise SQL query optimizer and performance analyzer.",
@@ -296407,6 +300135,30 @@
       ]
     },
     {
+      "name": "io-github-wkoverfield-quilt",
+      "displayName": "Quilt",
+      "description": "Track which AI agent wrote which lines in a shared Git checkout; each commits only its own lines.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.wkoverfield/quilt",
+      "version": "0.3.3",
+      "license": "MIT",
+      "repository": "https://github.com/wkoverfield/quilt",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@quilt-dev/cli",
+          "version": "0.3.3"
+        }
+      ]
+    },
+    {
       "name": "com-quintadb-mcp",
       "displayName": "QuintaDB",
       "description": "No-code databases, forms, portals and AI sites. Manage records and automation via natural language.",
@@ -296472,6 +300224,29 @@
         {
           "type": "streamable-http",
           "url": "https://quintadb.ru/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-quiver",
+      "displayName": "Quiver",
+      "description": "Quiver Quantitative MCP — alternative-data on public companies (quiverquant.com)",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/quiver",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-quiver",
+      "homepage": "https://pipeworx.io/packs/quiver",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/quiver/mcp"
         }
       ]
     },
@@ -299580,6 +303355,31 @@
         {
           "type": "streamable-http",
           "url": "https://realestate-pro.cz-agents.dev/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-realestateapi",
+      "displayName": "Realestateapi",
+      "description": "RealEstateAPI MCP — property search, detail, and skip-trace (realestateapi.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/realestateapi",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-realestateapi",
+      "homepage": "https://pipeworx.io/packs/realestateapi",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/realestateapi/mcp"
         }
       ]
     },
@@ -302745,6 +306545,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-regrid",
+      "displayName": "Regrid",
+      "description": "Regrid MCP — wraps the Regrid Parcel API v2 (regrid.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/regrid",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-regrid",
+      "homepage": "https://pipeworx.io/packs/regrid",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/regrid/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-uchit-mcp-regulated-ai-compliance",
       "displayName": "Regulated Ai Compliance",
       "description": "Regulated-industry AI compliance: EU AI Act, APRA, NIST AI RMF, ISO 42001, AU AI Safety.",
@@ -305198,6 +309022,43 @@
       ]
     },
     {
+      "name": "io-github-0xthaner-reputa",
+      "displayName": "Reputa",
+      "description": "Ethereum wallet risk and security analysis (Reputa), with optional x402 payment.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "analytics",
+        "security",
+        "code"
+      ],
+      "npm_package": "io.github.0xthaner/reputa",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/0xthaner/reputa",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "reputa-mcp",
+          "version": "1.0.0",
+          "env": [
+            {
+              "name": "REPUTA_BASE_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "REPUTA_PAYER_PRIVATE_KEY",
+              "required": false,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "com-tradallo-reputation",
       "displayName": "Reputation",
       "description": "Query cryptographically-verified trading reputations (humans + AI agents). ed25519-signed.",
@@ -305653,6 +309514,42 @@
       ]
     },
     {
+      "name": "io-github-servosity-resourceguru-mcp",
+      "displayName": "Resource Guru MCP",
+      "description": "Operate Resource Guru from your AI agent via MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.Servosity/resourceguru-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/servosity/msp-skills",
+      "packages": [
+        {
+          "registry": "mcpb",
+          "id": "https://github.com/Servosity/msp-skills/releases/download/resourceguru-v0.1.0/resourceguru-mcp.mcpb",
+          "version": "0.1.0",
+          "env": [
+            {
+              "name": "RESOURCEGURU_EMAIL",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "RESOURCEGURU_PASSWORD",
+              "required": true,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-webmyc-respira-wordpress",
       "displayName": "Respira WordPress MCP",
       "description": "WordPress MCP with native page-builder editing, full-page creation, and WooCommerce tools.",
@@ -306007,6 +309904,30 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-retractions",
+      "displayName": "Retractions",
+      "description": "Retractions / research-integrity MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/retractions",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-retractions",
+      "homepage": "https://pipeworx.io/packs/retractions",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/retractions/mcp"
         }
       ]
     },
@@ -306393,6 +310314,29 @@
               "secret": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-hectorguerilla-review-mcp",
+      "displayName": "Review",
+      "description": "Multi-model code review: a panel of models + detectors return a pass/fail verdict. Paid via x402.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.HectorGuerilla/review-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/HectorGuerilla/review-mcp",
+      "homepage": "https://review-mcp-x402.web.app",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://review-mcp-production.up.railway.app/mcp"
         }
       ]
     },
@@ -307873,6 +311817,30 @@
         {
           "type": "streamable-http",
           "url": "https://rnwy.com/api/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-matematicsolutions-ro-eli-mcp",
+      "displayName": "Ro Eli",
+      "description": "MCP server for Romanian legislation (Portal Legislativ SOAP) with verifiable citations.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.matematicsolutions/ro-eli-mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/matematicsolutions/ro-eli-mcp",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "ro-eli-mcp",
+          "version": "0.1.1",
+          "runtime": "uvx"
         }
       ]
     },
@@ -310306,7 +314274,7 @@
     {
       "name": "io-github-runapi-builder-runapi-mcp",
       "displayName": "Runapi",
-      "description": "130+ AI models for image, video, music, and audio — 18 providers, one API key.",
+      "description": "130+ AI models for image, video, music, and audio �� 18 providers, one API key.",
       "author": "unknown",
       "capabilities": [
         "tool"
@@ -312804,6 +316772,52 @@
             },
             {
               "name": "SF_API_VERSION",
+              "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-topness-msft-salonrunner-mcp",
+      "displayName": "Salonrunner",
+      "description": "Self-hosted MCP to find, book, and cancel salon appointments via SalonRunner.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "code"
+      ],
+      "npm_package": "io.github.topness-msft/salonrunner-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/topness-msft/salonrunner-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "salonrunner-mcp",
+          "version": "0.1.0",
+          "env": [
+            {
+              "name": "SALONRUNNER_SALON_ID",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "SALONRUNNER_USERNAME",
+              "required": true,
+              "secret": false
+            },
+            {
+              "name": "SALONRUNNER_PASSWORD",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "SALONRUNNER_READ_ONLY",
               "required": false,
               "secret": false
             }
@@ -319161,6 +323175,31 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-securitytrails",
+      "displayName": "Securitytrails",
+      "description": "SecurityTrails MCP — wraps SecurityTrails API (securitytrails.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "security",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/securitytrails",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-securitytrails",
+      "homepage": "https://pipeworx.io/packs/securitytrails",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/securitytrails/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-acedatacloud-mcp-seedance",
       "displayName": "Seedance",
       "description": "MCP server for ByteDance Seedance AI video generation",
@@ -320625,6 +324664,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-semver",
+      "displayName": "Semver",
+      "description": "Semantic Versioning (semver) MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/semver",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-semver",
+      "homepage": "https://pipeworx.io/packs/semver",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/semver/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-sidneybissoli-senado-br-mcp",
       "displayName": "Senado Br",
       "description": "MCP Server for Brazilian Federal Senate open data (legislators, bills, votes)",
@@ -321679,6 +325741,28 @@
       ]
     },
     {
+      "name": "ai-sentisense-market-intelligence",
+      "displayName": "SentiSense Market Intelligence",
+      "description": "US market mood, stock sentiment, SentiSense Score, news, analyst ratings, and institutional flows.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "ai.sentisense/market-intelligence",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://sentisense.ai/connect",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://app.sentisense.ai/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-nikx-tech-sentor-mcp",
       "displayName": "Sentor",
       "description": "Score sentiment toward specific entities in text. Cluster documents and name topics.",
@@ -322045,6 +326129,30 @@
         {
           "type": "streamable-http",
           "url": "https://seo.accruedev.com/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-seo-backlinks",
+      "displayName": "Seo Backlinks",
+      "description": "SEO Backlinks MCP — backlink intelligence via DataForSEO Backlinks API",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/seo-backlinks",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-seo-backlinks",
+      "homepage": "https://pipeworx.io/packs/seo-backlinks",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/seo-backlinks/mcp"
         }
       ]
     },
@@ -322531,6 +326639,28 @@
       ]
     },
     {
+      "name": "io-seoforgpt-seoforgpt-mcp",
+      "displayName": "SEOforGPT",
+      "description": "AI visibility reports, competitor insights, readiness audits, and GEO content workflows.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "io.seoforgpt/seoforgpt-mcp",
+      "version": "2.0.7",
+      "license": "MIT",
+      "homepage": "https://www.seoforgpt.io/docs/mcp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://www.seoforgpt.io/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-seojeom-seojeom-mcp",
       "displayName": "Seojeom",
       "description": "Local-first MCP server for Claude/Codex project wiki and graph workflows",
@@ -323001,6 +327131,31 @@
               "secret": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-serpapi",
+      "displayName": "Serpapi",
+      "description": "SerpApi MCP — wraps SerpApi (serpapi.com) search engines",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/serpapi",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-serpapi",
+      "homepage": "https://pipeworx.io/packs/serpapi",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/serpapi/mcp"
         }
       ]
     },
@@ -323766,6 +327921,27 @@
       ]
     },
     {
+      "name": "com-easyonward-mcp-server",
+      "displayName": "Server",
+      "description": "Passport visa, entry & transit requirements for any country pair, with official government sources.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "com.easyonward/mcp-server",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/no-lodging-or-fresh-baked-cookies/EasyOnward",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@easyonward/mcp-server",
+          "version": "0.1.1"
+        }
+      ]
+    },
+    {
       "name": "com-echosaw-mcp-server",
       "displayName": "Server",
       "description": "Media intelligence analysis for audio, video, and images via the Echosaw MCP server.",
@@ -324131,6 +328307,29 @@
               "secret": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "com-niftypm-mcp-server",
+      "displayName": "Server",
+      "description": "Nifty's MCP server — exposes tasks, projects, messages, and files as tools for AI agents.",
+      "author": "unknown",
+      "capabilities": [
+        "tool",
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "file"
+      ],
+      "npm_package": "com.niftypm/mcp-server",
+      "version": "0.8.1",
+      "license": "MIT",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.niftypm.com/mcp"
         }
       ]
     },
@@ -325776,7 +329975,7 @@
     {
       "name": "io-github-totesmagotes-mcp-server",
       "displayName": "Server",
-      "description": "Answer questions about ExpenseBot �� features, pricing, and integrations. Read-only.",
+      "description": "Answer questions about ExpenseBot — features, pricing, and integrations. Read-only.",
       "author": "unknown",
       "capabilities": [
         "resource"
@@ -333666,6 +337865,29 @@
       ]
     },
     {
+      "name": "app-goshipyard-shipyard",
+      "displayName": "Shipyard",
+      "description": "Ship, discover and review vibe-coded projects on Shipyard, the invite-only feed for AI-built apps.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "app.goshipyard/shipyard",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/jonnonz1/shipyard",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://goshipyard.app/mcp"
+        }
+      ]
+    },
+    {
       "name": "network-shodai-agreements",
       "displayName": "Shodai Agreements",
       "description": "Author, validate, deploy, and operate Shodai on-chain agreements.",
@@ -333741,6 +337963,30 @@
           "registry": "pypi",
           "id": "mcp-shodan",
           "version": "0.1.0"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-shodan",
+      "displayName": "Shodan",
+      "description": "Shodan MCP — wraps the full Shodan REST API (api.shodan.io)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/shodan",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-shodan",
+      "homepage": "https://pipeworx.io/packs/shodan",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/shodan/mcp"
         }
       ]
     },
@@ -336135,6 +340381,57 @@
       ]
     },
     {
+      "name": "io-github-silvanexum-silvanexum",
+      "displayName": "Silvanexum",
+      "description": "Spend control for AI agents - cost attribution, budget caps, and signed runs as MCP tools.",
+      "author": "unknown",
+      "capabilities": [
+        "tool",
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.silvanexum/silvanexum",
+      "version": "0.3.0",
+      "license": "MIT",
+      "repository": "https://github.com/silvanexum/Silvanexum-sdk",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@silvanexum/mcp",
+          "version": "0.3.0",
+          "runtime": "npx",
+          "env": [
+            {
+              "name": "SILVANEXUM_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "SILVANEXUM_BASE_URL",
+              "required": false,
+              "secret": false
+            }
+          ]
+        },
+        {
+          "registry": "pypi",
+          "id": "silvanexum-mcp",
+          "version": "0.1.2",
+          "runtime": "uvx",
+          "env": [
+            {
+              "name": "SILVANEXUM_API_KEY",
+              "required": true,
+              "secret": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "io-github-digilac-simap-mcp",
       "displayName": "Simap",
       "description": "MCP server for SIMAP.ch - Swiss public procurement platform",
@@ -336752,6 +341049,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-singapore-procurement",
+      "displayName": "Singapore Procurement",
+      "description": "Singapore Government Procurement MCP — GeBIZ tender awards (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/singapore-procurement",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-singapore-procurement",
+      "homepage": "https://pipeworx.io/packs/singapore-procurement",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/singapore-procurement/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-xavierfok-singapore-proxy-mcp",
       "displayName": "Singapore Proxy",
       "description": "Browse the web and run Google search through real Singapore mobile carrier IPs.",
@@ -337316,6 +341636,30 @@
         {
           "type": "streamable-http",
           "url": "https://connect.sixta.ai/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-matematicsolutions-sk-eli-mcp",
+      "displayName": "Sk Eli",
+      "description": "MCP server for Slovak legislation (Slov-lex) with ELI and verifiable citations.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.matematicsolutions/sk-eli-mcp",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/matematicsolutions/sk-eli-mcp",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "sk-eli-mcp",
+          "version": "0.1.1",
+          "runtime": "uvx"
         }
       ]
     },
@@ -337949,6 +342293,38 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.skillrepo.dev/api/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-tinh2-skills-hub",
+      "displayName": "Skills Hub",
+      "description": "Search & install 6,500+ AI agent skills from skills-hub.ai inside any MCP tool.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "search",
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.tinh2/skills-hub",
+      "version": "0.1.10",
+      "license": "MIT",
+      "repository": "https://github.com/tinh2/skills-hub",
+      "homepage": "https://skills-hub.ai",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@skills-hub-ai/mcp",
+          "version": "0.1.10"
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://api.skills-hub.ai/mcp"
         }
       ]
     },
@@ -340168,6 +344544,27 @@
       ]
     },
     {
+      "name": "io-smartroutes-smartroutes",
+      "displayName": "Smartroutes",
+      "description": "Route optimisation, orders, booking and fleet management for a SmartRoutes depot.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [],
+      "npm_package": "io.smartroutes/smartroutes",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/SmartRoutes-io/smartroutes-mcp",
+      "homepage": "https://smartroutes.io/api",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.smartroutes.io/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-maurodruwel-smartschool-mcp",
       "displayName": "Smartschool",
       "description": "Access Smartschool courses, grades, assignments, and messages through the Model Context Protocol",
@@ -341028,6 +345425,29 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.sniff.world/mcp/"
+        }
+      ]
+    },
+    {
+      "name": "com-snitcher-snitcher",
+      "displayName": "Snitcher",
+      "description": "Identify companies visiting your website: organisations, contacts, segments, tags, CRM sync.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "crm"
+      ],
+      "npm_package": "com.snitcher/snitcher",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://snitcher.com",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://app.snitcher.com/mcp/snitcher"
         }
       ]
     },
@@ -342233,6 +346653,31 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.socialspool.com/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-jackvitick-socialync",
+      "displayName": "Socialync",
+      "description": "Draft, schedule, and publish posts to 8 social platforms with human approval via Socialync OAuth.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "security",
+        "social",
+        "code"
+      ],
+      "npm_package": "io.github.JackVitick/socialync",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/JackVitick/socialync-mcp",
+      "homepage": "https://www.socialync.io/features/mcp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://socialync-mcp-ntgtgrzanq-ue.a.run.app/mcp"
         }
       ]
     },
@@ -343914,6 +348359,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-south-africa-tenders",
+      "displayName": "South Africa Tenders",
+      "description": "South Africa Government Procurement MCP — National Treasury eTenders / OCPO (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/south-africa-tenders",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-south-africa-tenders",
+      "homepage": "https://pipeworx.io/packs/south-africa-tenders",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/south-africa-tenders/mcp"
         }
       ]
     },
@@ -346145,6 +350613,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-sports-game-odds",
+      "displayName": "Sports Game Odds",
+      "description": "Sports Game Odds MCP — wraps the Sports Game Odds API (sportsgameodds.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/sports-game-odds",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-sports-game-odds",
+      "homepage": "https://pipeworx.io/packs/sports-game-odds",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/sports-game-odds/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-lacausecrypto-sports-hub",
       "displayName": "Sports Hub",
       "description": "29 sports API providers, 319 tools. Scores, stats, odds, esports, and more.",
@@ -346853,25 +351345,18 @@
     {
       "name": "ai-spritecook-generate",
       "displayName": "SpriteCook",
-      "description": "Generate game sprites and assets from text prompts for game development.",
+      "description": "Generate game assets with AI for 2D games, including sprites, tilesets, and animations.",
       "author": "unknown",
       "capabilities": [
-        "prompt"
+        "tool"
       ],
       "tags": [
         "ai"
       ],
       "npm_package": "ai.spritecook/generate",
-      "version": "0.2.6",
+      "version": "0.2.17",
       "license": "MIT",
-      "repository": "https://github.com/SpriteCook/spritecook-mcp",
-      "packages": [
-        {
-          "registry": "npm",
-          "id": "spritecook-mcp",
-          "version": "0.2.6"
-        }
-      ],
+      "repository": "https://github.com/spritecook/spritecook-mcp",
       "remotes": [
         {
           "type": "streamable-http",
@@ -350794,6 +355279,30 @@
           "registry": "npm",
           "id": "@stitchwand/mcp-server",
           "version": "0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "dev-stitchapi-docs",
+      "displayName": "StitchAPI Docs",
+      "description": "Search and read the StitchAPI docs: search_docs finds relevant sections, get_doc reads a page.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "search",
+        "web"
+      ],
+      "npm_package": "dev.stitchapi/docs",
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "https://github.com/rejifald/StitchAPI",
+      "homepage": "https://stitchapi.dev",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://stitchapi.dev/api/mcp"
         }
       ]
     },
@@ -355275,6 +359784,38 @@
       ]
     },
     {
+      "name": "tech-geckovision-surf",
+      "displayName": "Surf",
+      "description": "Point Gecko at an OpenAPI spec; get first-call-correct, auth-hidden agent tools.",
+      "author": "unknown",
+      "capabilities": [
+        "tool",
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "vision",
+        "security"
+      ],
+      "npm_package": "tech.geckovision/surf",
+      "version": "0.1.1",
+      "license": "MIT",
+      "repository": "https://github.com/GeckoVision/gecko-surf",
+      "packages": [
+        {
+          "registry": "pypi",
+          "id": "gecko-surf",
+          "version": "0.1.1"
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.geckovision.tech/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-eranimore-surf-session-finder",
       "displayName": "Surf Session Finder",
       "description": "Surf park sessions schedule availability and notifications for wave park surfers worldwide",
@@ -358940,6 +363481,29 @@
           "registry": "pypi",
           "id": "tw-cwa-weather-mcp",
           "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-taiwan-procurement",
+      "displayName": "Taiwan Procurement",
+      "description": "Taiwan Government Procurement MCP — 政府電子採購網 (PCC) tenders (keyless).",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/taiwan-procurement",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-taiwan-procurement",
+      "homepage": "https://pipeworx.io/packs/taiwan-procurement",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/taiwan-procurement/mcp"
         }
       ]
     },
@@ -364383,6 +368947,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-textcase",
+      "displayName": "Textcase",
+      "description": "Text case conversion MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/textcase",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-textcase",
+      "homepage": "https://pipeworx.io/packs/textcase",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/textcase/mcp"
+        }
+      ]
+    },
+    {
       "name": "com-textmine-textmine-mcp",
       "displayName": "TextMine MCP",
       "description": "Search, read, and automate TextMine documents, records, workflows, integrations, and agent tasks.",
@@ -364449,6 +369036,29 @@
         {
           "type": "streamable-http",
           "url": "https://hermitsh.ai/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-textstats",
+      "displayName": "Textstats",
+      "description": "Text statistics & readability MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/textstats",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-textstats",
+      "homepage": "https://pipeworx.io/packs/textstats",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/textstats/mcp"
         }
       ]
     },
@@ -365643,6 +370253,43 @@
           "registry": "pypi",
           "id": "threadkeeper",
           "version": "0.13.0"
+        }
+      ]
+    },
+    {
+      "name": "io-github-threadctx-dev-threadctx-mcp",
+      "displayName": "Threadctx",
+      "description": "Shared memory MCP server for AI coding agents — local by default, team-shared via threadctx.dev.",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "ai",
+        "memory",
+        "code"
+      ],
+      "npm_package": "io.github.threadctx-dev/threadctx-mcp",
+      "version": "0.2.1",
+      "license": "MIT",
+      "repository": "https://github.com/threadctx-dev/threadctx-mcp",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "threadctx-mcp",
+          "version": "0.2.1",
+          "env": [
+            {
+              "name": "THREADCTX_MODE",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "THREADCTX_API_KEY",
+              "required": false,
+              "secret": true
+            }
+          ]
         }
       ]
     },
@@ -368842,6 +373489,29 @@
         {
           "type": "streamable-http",
           "url": "https://mcp.timeslope.com/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-timestamp",
+      "displayName": "Timestamp",
+      "description": "Unix timestamp MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/timestamp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-timestamp",
+      "homepage": "https://pipeworx.io/packs/timestamp",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/timestamp/mcp"
         }
       ]
     },
@@ -374092,6 +378762,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-tradier",
+      "displayName": "Tradier",
+      "description": "Tradier MCP — stock & options market data via the Tradier Brokerage API",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/tradier",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-tradier",
+      "homepage": "https://pipeworx.io/packs/tradier",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/tradier/mcp"
+        }
+      ]
+    },
+    {
       "name": "agency-lona-trading",
       "displayName": "Trading",
       "description": "AI-powered trading strategy development: backtesting, market data, and portfolio analysis",
@@ -374285,6 +378979,30 @@
         {
           "type": "streamable-http",
           "url": "https://api.tzilla.live/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-traject-ecommerce",
+      "displayName": "Traject Ecommerce",
+      "description": "Traject Data ecommerce MCP — Amazon (Rainforest API) + Walmart (BlueCart API)",
+      "author": "unknown",
+      "capabilities": [
+        "resource"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/traject-ecommerce",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-traject-ecommerce",
+      "homepage": "https://pipeworx.io/packs/traject-ecommerce",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/traject-ecommerce/mcp"
         }
       ]
     },
@@ -381632,6 +386350,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-ulid",
+      "displayName": "Ulid",
+      "description": "ULID MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/ulid",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-ulid",
+      "homepage": "https://pipeworx.io/packs/ulid",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/ulid/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-flywheelstudio-ulink",
       "displayName": "Ulink",
       "description": "Deep linking for iOS, Android & Flutter. Firebase Dynamic Links alternative.",
@@ -382635,6 +387376,29 @@
               "secret": false
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-unicode",
+      "displayName": "Unicode",
+      "description": "Unicode character MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/unicode",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-unicode",
+      "homepage": "https://pipeworx.io/packs/unicode",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/unicode/mcp"
         }
       ]
     },
@@ -385177,6 +389941,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-url",
+      "displayName": "Url",
+      "description": "URL parsing & building MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/url",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-url",
+      "homepage": "https://pipeworx.io/packs/url",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/url/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-csoai-org-url-ai-mcp",
       "displayName": "Url Ai",
       "description": "Url Ai MCP server. Tools: parse url, shorten url data, check url safety. Built by MEOK AI Labs.",
@@ -386106,6 +390893,29 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-useragent",
+      "displayName": "Useragent",
+      "description": "User-Agent parser MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/useragent",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-useragent",
+      "homepage": "https://pipeworx.io/packs/useragent",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/useragent/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-userguiding-mcp",
       "displayName": "UserGuiding",
       "description": "Manage users, track events, companies, and knowledge base articles in UserGuiding.",
@@ -386708,6 +391518,29 @@
               "secret": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "io-github-pipeworx-io-uuid",
+      "displayName": "Uuid",
+      "description": "UUID validation & generation MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/uuid",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-uuid",
+      "homepage": "https://pipeworx.io/packs/uuid",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/uuid/mcp"
         }
       ]
     },
@@ -387710,6 +392543,48 @@
           "registry": "npm",
           "id": "@getvari/mcp",
           "version": "1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "ai-variel-mcp-server",
+      "displayName": "Variel MCP Server",
+      "description": "Generate your brand in-agent, then keep tokens, components, and copy on-brand over MCP.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "ai.variel/mcp-server",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/jeisenberg/ai-brand-studio",
+      "homepage": "https://variel.ai/connect",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@variel/mcp-server",
+          "version": "0.1.0",
+          "runtime": "npx",
+          "env": [
+            {
+              "name": "BRAND_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "VARIEL_API_URL",
+              "required": false,
+              "secret": false
+            },
+            {
+              "name": "ANTHROPIC_API_KEY",
+              "required": false,
+              "secret": true
+            }
+          ]
         }
       ]
     },
@@ -394774,6 +399649,42 @@
       ]
     },
     {
+      "name": "ai-voxplo-voxplo",
+      "displayName": "Voxplo",
+      "description": "Give AI agents a phone: outbound AI calls that return a summary, transcript, and extracted fields.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai"
+      ],
+      "npm_package": "ai.voxplo/voxplo",
+      "version": "0.1.1",
+      "license": "MIT",
+      "homepage": "https://voxplo.ai",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "voxplo-mcp",
+          "version": "0.1.1",
+          "env": [
+            {
+              "name": "VOXPLO_API_KEY",
+              "required": true,
+              "secret": true
+            }
+          ]
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://mcp.voxplo.ai/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-rocnubie-voxtraltts-mcp",
       "displayName": "Voxtral TTS MCP",
       "description": "Explore Voxtral TTS with API notes, setup guidance, use cases, workflow tips, and FAQ answers for",
@@ -395923,6 +400834,30 @@
       ]
     },
     {
+      "name": "io-github-pipeworx-io-walkscore",
+      "displayName": "Walkscore",
+      "description": "Walk Score MCP — wraps the Walk Score API (walkscore.com)",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "code"
+      ],
+      "npm_package": "io.github.pipeworx-io/walkscore",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/pipeworx-io/mcp-walkscore",
+      "homepage": "https://pipeworx.io/packs/walkscore",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://gateway.pipeworx.io/walkscore/mcp"
+        }
+      ]
+    },
+    {
       "name": "io-github-rusty4444-wallabag-mcp",
       "displayName": "Wallabag MCP",
       "description": "MCP server for wallabag read-it-later entries, tags, and annotations.",
@@ -396419,6 +401354,37 @@
         {
           "type": "streamable-http",
           "url": "https://warden.flowvolt.io/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-sukrutkrdg-warden402-mcp",
+      "displayName": "Warden402",
+      "description": "Pre-execution safety for AI agents on Base. Guard a token, tx or address: block/review/clear.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.sukrutkrdg/warden402-mcp",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/sukrutkrdg/warden402.xyz",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "warden402-mcp",
+          "version": "0.1.0",
+          "env": [
+            {
+              "name": "WARDEN_API_URL",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -397828,6 +402794,35 @@
           "registry": "npm",
           "id": "@kulybaba/mcp-weather-server",
           "version": "0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "io-github-kulybaba-weather-mcp",
+      "displayName": "Weather",
+      "description": "An MCP server for weather information by @kulybaba",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "code"
+      ],
+      "npm_package": "io.github.kulybaba/weather-mcp",
+      "version": "0.0.3",
+      "license": "MIT",
+      "repository": "https://github.com/kulybaba/mcp-weather-server",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@kulybaba/mcp-weather-server",
+          "version": "0.0.3"
+        }
+      ],
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://kulybaba.weather.com/mcp/v3.0.0/"
         }
       ]
     },
@@ -400279,6 +405274,45 @@
       "version": "0.2.9",
       "license": "MIT",
       "repository": "https://github.com/x-monk/webshift"
+    },
+    {
+      "name": "io-github-spikeycoder-website-auditor-mcp",
+      "displayName": "Website Auditor",
+      "description": "AI visibility + site audits: see if ChatGPT, Perplexity, Claude & Gemini recommend a website.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "web",
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.SpikeyCoder/website-auditor-mcp",
+      "version": "1.0.1",
+      "license": "MIT",
+      "repository": "https://github.com/SpikeyCoder/website-auditor-mcp",
+      "homepage": "https://website-auditor.io",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@spikeycoder/website-auditor-mcp",
+          "version": "1.0.1",
+          "runtime": "npx",
+          "env": [
+            {
+              "name": "WA_API_KEY",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "WA_API_BASE_URL",
+              "required": false,
+              "secret": false
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "com-zeltser-website-search",
@@ -405255,14 +410289,14 @@
         "code"
       ],
       "npm_package": "io.github.SaravananJaichandar/world-model-mcp",
-      "version": "0.6.1",
+      "version": "0.10.0",
       "license": "MIT",
       "repository": "https://github.com/SaravananJaichandar/world-model-mcp",
       "packages": [
         {
           "registry": "pypi",
           "id": "world-model-mcp",
-          "version": "0.6.1",
+          "version": "0.10.0",
           "env": [
             {
               "name": "WORLD_MODEL_DB_PATH",
@@ -405672,6 +410706,43 @@
         {
           "type": "streamable-http",
           "url": "https://gateway.pipeworx.io/worms/mcp"
+        }
+      ]
+    },
+    {
+      "name": "io-github-theshajha-wovo",
+      "displayName": "Wovo",
+      "description": "Deploy HTML from any AI tool to a versioned, shareable library on wovo.dev; manage pages.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "code"
+      ],
+      "npm_package": "io.github.theshajha/wovo",
+      "version": "0.2.2",
+      "license": "MIT",
+      "repository": "https://github.com/theshajha/wovo-cli",
+      "packages": [
+        {
+          "registry": "npm",
+          "id": "@gowovo/wovo",
+          "version": "0.2.2",
+          "runtime": "npx",
+          "env": [
+            {
+              "name": "WOVO_TOKEN",
+              "required": true,
+              "secret": true
+            },
+            {
+              "name": "WOVO_WORKSPACE",
+              "required": false,
+              "secret": false
+            }
+          ]
         }
       ]
     },
@@ -409243,6 +414314,30 @@
         {
           "type": "streamable-http",
           "url": "https://feedoracle.io/xrpl/mcp/"
+        }
+      ]
+    },
+    {
+      "name": "io-github-philpof102-svg-xsignal",
+      "displayName": "Xsignal",
+      "description": "x402-paid X/social signal + Base token market intel for AI agents. Pay-per-call USDC, free preview.",
+      "author": "unknown",
+      "capabilities": [
+        "tool"
+      ],
+      "tags": [
+        "ai",
+        "social",
+        "code"
+      ],
+      "npm_package": "io.github.philpof102-svg/xsignal",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": "https://github.com/philpof102-svg/xsignal",
+      "remotes": [
+        {
+          "type": "streamable-http",
+          "url": "https://xsignal-production.up.railway.app/mcp"
         }
       ]
     },
